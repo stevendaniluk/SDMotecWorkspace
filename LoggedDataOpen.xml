@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Columns Locale="English_United States.1252" DefaultLocale="C" Version="106" Sort.Column="10" Sort.Ascending="0">
+ <Column Keyword="Venue" Flags="1"/>
+ <Column Keyword="Event" Flags="1"/>
+ <Column Keyword="Session" Flags="1"/>
+ <Column Keyword="Year" Flags="1"/>
+ <Column Keyword="Driver" Flags="1"/>
+ <Column Keyword="Fastest Time" Flags="1"/>
+ <Column Keyword="DateTime" Flags="1"/>
+ <Column Keyword="Short Comment" Flags="1"/>
+ <Column Keyword="Vehicle Id" Flags="1"/>
+ <Column Keyword="Engine Id" Flags="1"/>
+ <Column Keyword="File" Flags="0"/>
+ <Column Keyword="FileSize" Flags="0"/>
+ <Column Keyword="Device Type" Flags="0"/>
+ <Column Keyword="Device Serial" Flags="0"/>
+ <Column Keyword="Device Version" Flags="0"/>
+ <Column Keyword="Vehicle Number" Flags="0"/>
+ <Column Keyword="Vehicle Desc" Flags="0"/>
+ <Column Keyword="Vehicle Type" Flags="0"/>
+ <Column Keyword="Fastest Lap" Flags="0"/>
+ <Column Keyword="Total Laps" Flags="0"/>
+ <Column Keyword="Venue Category" Flags="0"/>
+</Columns>

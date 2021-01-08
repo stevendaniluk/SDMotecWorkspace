@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Maths Locale="English_United States.1252" DefaultLocale="C" Id="Car - iRacing - Porsche 919" Condition="'Vehicle Id' == &quot;porsche919&quot;">
+ <MathConstants>
+  <MathConstant Name="CdA" Value="0" Unit="" Comment="Drag coefficient per frontal area"/>
+  <MathConstant Name="Mass" Value="925" Unit="kg" Comment="Estimated from 875kg plus 62.5L of fuel"/>
+  <MathConstant Name="MR Front" Value="1.0" Unit="ratio" Comment="Suspension Travel / Wheel Travel
+
+Estimated by changing the centre spring and observing the change in ride height and centre damper position in the setup menu."/>
+  <MathConstant Name="MR Mono Front" Value="0.5" Unit="ratio" Comment="Suspension Travel / Wheel Travel
+
+Estimated by changing the centre spring and observing the change in ride height and centre damper position in the setup menu."/>
+  <MathConstant Name="MR Mono Rear" Value="0.5" Unit="ratio" Comment="Suspension Travel / Wheel Travel
+
+Estimated by changing the centre spring and observing the change in ride height and centre damper position in the setup menu."/>
+  <MathConstant Name="MR Rear" Value="1.0" Unit="ratio" Comment="Suspension Travel / Wheel Travel
+
+Estimated by changing the centre spring and observing the change in ride height and centre damper position in the setup menu."/>
+  <MathConstant Name="Steer Ratio" Value="13" Unit="ratio" Comment="UNKNOWN"/>
+  <MathConstant Name="Toe Front" Value="0.0" Unit="deg" Comment="Positive outwards"/>
+  <MathConstant Name="Toe Rear" Value="0.0" Unit="deg" Comment="Positive outwards"/>
+  <MathConstant Name="Track Width" Value="1.70" Unit="m"/>
+  <MathConstant Name="Track Width F" Value="1.70" Unit="m" Comment="Approximated from the listed overall width of 1900mm"/>
+  <MathConstant Name="Track Width R" Value="1.70" Unit="m" Comment="Approximated from the listed overall width of 1900mm"/>
+  <MathConstant Name="Wheelbase" Value="3.73" Unit="m" Comment="Approximated from pictures and the listed overall length of 4650mm"/>
+ </MathConstants>
+ <MathItems>
+  <MathExpression Id="Damper Pos FC" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="'HFshockDefl' [m]" SampleRate="0" Unit="m"/>
+  <MathExpression Id="Damper Pos RC" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" Script="'HRshockDefl' [m]" SampleRate="0" Unit="m"/>
+  <MathExpression Id="Damper Rate FC" DisplayUnit="mm/s" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="'HFshockVel' [m/s]" SampleRate="0" Unit="m/s"/>
+  <MathExpression Id="Damper Rate RC" DisplayUnit="mm/s" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" Script="'HRshockVel' [m/s]" SampleRate="0" Unit="m/s"/>
+  <MathExpression Id="HYS Battery" DisplayUnit="%" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="'EnergyERSBatteryPct' [%]" SampleRate="0" Unit="%"/>
+  <MathExpression Id="HYS Deploy Limit" DisplayUnit="%" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'EnergyMGU_KLapDeployPct' [%]" SampleRate="0" Unit="%"/>
+  <MathExpression Id="HYS Battery Energy" DisplayUnit="MJ" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'EnergyERSBattery' [J]" SampleRate="0" Unit="J"/>
+  <MathExpression Id="HYS Deploy Energy" DisplayUnit="MJ" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'EnergyBatteryToMGU_KLap' [J]" SampleRate="0" Unit="J"/>
+  <MathExpression Id="HYS Deploy Active" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'dcHysBoostHold'" SampleRate="0" Unit=""/>
+ </MathItems>
+</Maths>

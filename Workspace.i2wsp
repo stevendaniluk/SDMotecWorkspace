@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<Analysis Locale="English_United States.1252" DefaultLocale="C" Version="103" ShowOverlays="1" ExcludeUntrusted="1" IncludeOverlays="0" GraphTimeFormat="4" RemoveOnChanDblClick="1" ProfileId="Circuit" VideoDefaultViews="" SetupSheetPasswdReqd="0" LapTimeDisplayFormat="0" LapTimeDisplayUnit="mph" LapNameInOut="0" AutoLapNumber="0" SplitterPos="1854">
+ <Resources/>
+ <LatGTrackGen LateralGChannel="G Lat" InverseLateralG="1"/>
+ <DataSelect SelectFastestOnLoad="1" DefaultShowDisabled="0" MainColorSource="0">
+  <Explore HRef="C:\Users\steven\Documents\Sim Telemetry\ACC"/>
+  <DataSources/>
+  <View Name="Laps" Color="128,240,0" View="Laps"/>
+  <View Name="Outings" Color="240,128,0" View="Outings"/>
+ </DataSelect>
+ <ChannelsWindow/>
+ <CAN/>
+ <MoTeC.TrackPos Version="100" Name="TrackPosCtrl.inner" PosPC="0,0,214,361" ShowCaption="0" AutoCaption="0" LinkZoom="1" ModeId="" ShowDataLegend="1" TelemetryZoom="0" ShowSectLabels="0" ShowSectMarks="1" LinkCursor="1" UseLocalColors="0">
+  <ComponentColorScheme>
+   <Entry Name="CptDataBackground">
+    <RenderMode Mode="SCREEN" RGB="0,128,0"/>
+    <RenderMode Mode="PRINT" RGB="255,255,255"/>
+   </Entry>
+   <Entry Name="CptDataForeground">
+    <RenderMode Mode="SCREEN" RGB="255,255,255"/>
+    <RenderMode Mode="PRINT" RGB="0,0,0"/>
+   </Entry>
+   <Entry Name="RangeMark">
+    <RenderMode Mode="SCREEN" RGB="200,0,0"/>
+    <RenderMode Mode="PRINT" RGB="200,0,0"/>
+   </Entry>
+  </ComponentColorScheme>
+  <TrackMapWindow>
+   <SizeScheme>
+    <SizeSchemeEntry Name="Cursor" INTValue="7"/>
+    <SizeSchemeEntry Name="Detail" INTValue="1"/>
+    <SizeSchemeEntry Name="Material" INTValue="1"/>
+   </SizeScheme>
+  </TrackMapWindow>
+ </MoTeC.TrackPos>
+ <ValuesWindow SplitterPos="7739" ViewMode="1">
+  <MoTeC.TrackPos Version="100" Name="ValuesWindowTrack.1" PosPC="0,0,300,300" ShowCaption="0" AutoCaption="0" LinkZoom="1" ModeId="" ShowDataLegend="1" TelemetryZoom="0" ShowSectLabels="0" ShowSectMarks="0" LinkCursor="1" UseLocalColors="0">
+   <ComponentColorScheme>
+    <Entry Name="CptDataBackground">
+     <RenderMode Mode="SCREEN" RGB="0,128,0"/>
+     <RenderMode Mode="PRINT" RGB="255,255,255"/>
+    </Entry>
+    <Entry Name="CptDataForeground">
+     <RenderMode Mode="SCREEN" RGB="255,255,255"/>
+     <RenderMode Mode="PRINT" RGB="0,0,0"/>
+    </Entry>
+    <Entry Name="RangeMark">
+     <RenderMode Mode="SCREEN" RGB="200,0,0"/>
+     <RenderMode Mode="PRINT" RGB="200,0,0"/>
+    </Entry>
+   </ComponentColorScheme>
+   <TrackMapWindow>
+    <SizeScheme>
+     <SizeSchemeEntry Name="Cursor" INTValue="7"/>
+     <SizeSchemeEntry Name="Detail" INTValue="1"/>
+     <SizeSchemeEntry Name="Material" INTValue="1"/>
+    </SizeScheme>
+   </TrackMapWindow>
+  </MoTeC.TrackPos>
+ </ValuesWindow>
+ <QuickSelectKeys>
+  <Key Name="F5" Customised="1" Prompted="1"/>
+  <Key Name="F6" Customised="0" Prompted="0"/>
+  <Key Name="F7" Customised="0" Prompted="0"/>
+  <Key Name="F8" Customised="0" Prompted="0"/>
+ </QuickSelectKeys>
+ <Workbooks Version="100" Name="My Workbooks" Active="Driver">
+  <Workbook Name="Driver" XRef="Workbooks\Driver.i2wkb"/>
+  <Workbook Name="Traction" XRef="Workbooks\Traction.i2wkb"/>
+  <Workbook Name="Suspension" XRef="Workbooks\Suspension.i2wkb"/>
+  <Workbook Name="Tires" XRef="Workbooks\Tires.i2wkb"/>
+  <Workbook Name="Brakes" XRef="Workbooks\Brakes.i2wkb"/>
+  <Workbook Name="Drivetrain" XRef="Workbooks\Drivetrain.i2wkb"/>
+  <Workbook Name="Notes" XRef="Workbooks\Notes.i2wkb"/>
+ </Workbooks>
+ <DockWindows>
+  <DockWindow Id="Alarms" Visible="0" IsDocked="1" IsPinned="1" DockOffset="0.25" DockSide="0" DockIndex="0" Height="160" Width="220"/>
+  <DockWindow Id="Data" Visible="1" IsDocked="1" IsPinned="0" DockOffset="0" DockSide="3" DockIndex="0" Height="1276" Width="214"/>
+  <DockWindow Id="Channels" Visible="1" IsDocked="1" IsPinned="1" DockOffset="0" DockSide="35" DockIndex="0" Height="110" Width="220"/>
+  <DockWindow Id="Reports" Visible="1" IsDocked="1" IsPinned="1" DockOffset="0" DockSide="35" DockIndex="1" Height="110" Width="220"/>
+  <DockWindow Id="Layouts" Visible="1" IsDocked="1" IsPinned="1" DockOffset="0" DockSide="35" DockIndex="2" Height="110" Width="220"/>
+  <DockWindow Id="Track" Visible="0" IsDocked="0" Position="1956,378,2510,860"/>
+ </DockWindows>
+ <TelemetrySettings/>
+ <DataExport Path="" Selection="0" Rate="0" Flags="0"/>
+ <VideoGenerate VideoView="" Selection="0">
+  <OptionItems/>
+ </VideoGenerate>
+ <ConversionWizard ConverterId="0" InFilesChkd="1" InFilesDir="" InFoldersDir="" InSubFolderChkd="1" OutFolderChkd="0" OutFolder="" UnitMappingLastUsed="" OpenFilesChkd="0" OverwriteChkd="0"/>
+</Analysis>

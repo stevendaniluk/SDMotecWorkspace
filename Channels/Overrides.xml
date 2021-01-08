@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<Overrides Locale="English_United States.1252" DefaultLocale="C">
+ <Override Id="Accel Lat" DisplayUnit="m/s/s"/>
+ <Override Id="Accel Long" DisplayUnit="m/s/s"/>
+ <Override Id="Air Temp Inlet" DisplayMax="332.149993999999992" DisplayMin="272.149993999999992" AutoScale="0"/>
+ <Override Id="BRAKE" DisplayColorIndex="0"/>
+ <Override Id="BRAKE_TEMP_RR" DisplayColorIndex="7"/>
+ <Override Id="Bat Volts ADL" DisplayMax="15.000000000000000" DisplayMin="10.000000000000000" AutoScale="0"/>
+ <Override Id="Corr Speed" DisplayMax="69.444444444444443" DisplayMin="0.000000000000000" AutoScale="0" DisplayColorIndex="3"/>
+ <Override Id="Damper Vel FL" AutoScale="0" DisplayMin="-0.200000000000000" DisplayMax="0.200000000000000"/>
+ <Override Id="Eng Oil Pres" DisplayMax="600000.000000000000000" DisplayMin="0.000000000000000" AutoScale="0"/>
+ <Override Id="Eng Oil Temp" DisplayMax="382.149993999999992" DisplayMin="272.149993999999992" AutoScale="0"/>
+ <Override Id="Engine RPM" DisplayMax="837.758057000000008" DisplayMin="0.000000000000000" AutoScale="0"/>
+ <Override Id="Engine Temp" DisplayMax="382.149993999999992" DisplayMin="272.149993999999992" AutoScale="0"/>
+ <Override Id="Fuel Pres" DisplayMax="600000.000000000000000" DisplayMin="0.000000000000000" AutoScale="0"/>
+ <Override Id="G Force Lat" DisplayMax="19.613303999999999" DisplayMin="-19.613303999999999" AutoScale="0"/>
+ <Override Id="G Force Long" DisplayMax="14.709978000000000" DisplayMin="-14.709978000000000" AutoScale="0"/>
+ <Override Id="GEAR" AutoScale="0" DisplayMin="0.000000000000000" DisplayMax="6.000000000000000"/>
+ <Override Id="G_LAT" DisplayDPS="2"/>
+ <Override Id="Lambda 1" DisplayMax="1.100000000000000" DisplayMin="0.800000000000000" AutoScale="0"/>
+ <Override Id="Lambda 2" DisplayMax="1.100000000000000" DisplayMin="0.800000000000000" AutoScale="0"/>
+ <Override Id="Manifold Pres" DisplayMax="249999.984375000000000" DisplayMin="0.000000000000000" AutoScale="0"/>
+ <Override Id="Oversteer" DisplayMax="0.157079634086134" DisplayMin="-0.157079634086134" DisplayColorIndex="7" AutoScale="0"/>
+ <Override Id="ROTY" DisplayDPS="2" DisplayMin="-1.745329267623711" DisplayUnit="deg/s" DisplayColorIndex="2" AutoScale="0" DisplayMax="1.745329267623711"/>
+ <Override Id="SPEED" DisplayDPS="1" DisplayUnit="km/h" DisplayColorIndex="4"/>
+ <Override Id="STEERANGLE" AutoScale="0" DisplayColorIndex="2" DisplayMin="-3.141592681722680" DisplayMax="3.141592681722680"/>
+ <Override Id="SUS_TRAVEL_LF" DisplayColorIndex="4"/>
+ <Override Id="SUS_TRAVEL_LR" DisplayColorIndex="0"/>
+ <Override Id="SUS_TRAVEL_RR" DisplayColorIndex="1"/>
+ <Override Id="Steer Angle" DisplayUnit="rad"/>
+ <Override Id="Steered Angle" DisplayMax="0.174533000000000" DisplayMin="-0.174533000000000" AutoScale="0"/>
+ <Override Id="Steering Wheel Angle" DisplayUnit="deg"/>
+ <Override Id="THROTTLE" DisplayColorIndex="4"/>
+ <Override Id="Throttle Pos" DisplayMax="1.000000000000000" DisplayMin="0.000000000000000" AutoScale="0"/>
+ <Override Id="Tire Temp Center FR" DisplayColorIndex="2"/>
+ <Override Id="Tyre Temp FL Centre" DisplayColorIndex="3"/>
+ <Override Id="Tyre Temp FL Inner" DisplayColorIndex="5"/>
+ <Override Id="Tyre Temp FL Outer" DisplayColorIndex="7"/>
+ <Override Id="Tyre Temp FR Inner" DisplayColorIndex="6"/>
+ <Override Id="Tyre Temp FR Outer" DisplayColorIndex="1"/>
+ <Override Id="Tyre Temp RR Centre" DisplayColorIndex="1"/>
+ <Override Id="Tyre Temp RR Inner" DisplayColorIndex="7"/>
+ <Override Id="Tyre Temp RR Outer" DisplayColorIndex="2"/>
+ <Override Id="glat" DisplayColorIndex="3" AutoScale="0" DisplayMin="-29.419956144652041" DisplayMax="29.419956144652041"/>
+ <Override Id="glong" AutoScale="0" DisplayMin="-24.516630120543368" DisplayMax="24.516630120543368"/>
+ <Override Id="steered angle" DisplayUnit="deg"/>
+</Overrides>

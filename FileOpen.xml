@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<FileOpen SortColumn="6" SortOrder="0">
+  <Detail Index="8" Order="-2" Name="Time" Width="80" Flags="2"/>
+  <Detail Index="7" Order="-1" Name="Date" Width="80" Flags="2"/>
+  <Detail Index="0" Order="0" Name="Event" Width="100" Flags="11"/>
+  <Detail Index="1" Order="1" Name="Venue" Width="80" Flags="11"/>
+  <Detail Index="2" Order="2" Name="Driver" Width="80" Flags="11"/>
+  <Detail Index="3" Order="3" Name="Vehicle Id" Width="80" Flags="3"/>
+  <Detail Index="4" Order="4" Name="Vehicle Desc" Width="80" Flags="3"/>
+  <Detail Index="5" Order="5" Name="Session" Width="80" Flags="3"/>
+  <Detail Index="6" Order="6" Name="Date and Time" Width="125" Flags="45"/>
+  <Detail Index="9" Order="7" Name="Fastest Lap" Width="100" Flags="11"/>
+  <Detail Index="10" Order="8" Name="Lap Number" Width="75" Flags="19"/>
+  <Detail Index="11" Order="9" Name="Total Laps" Width="65" Flags="19"/>
+  <Detail Index="12" Order="10" Name="Engine" Width="50" Flags="3"/>
+  <Detail Index="13" Order="11" Name="Comment" Width="230" Flags="11"/>
+  <Detail Index="14" Order="12" Name="Filename" Width="80" Flags="3"/>
+  <Detail Index="15" Order="13" Name="Filesize" Width="55" Flags="3"/>
+  <Detail Index="16" Order="14" Name="Device" Width="55" Flags="3"/>
+  <Detail Index="17" Order="15" Name="Serial Number" Width="85" Flags="19"/>
+  <Detail Index="18" Order="16" Name="Version" Width="55" Flags="3"/>
+  <Detail Index="19" Order="17" Name="Logging" Width="80" Flags="3"/>
+</FileOpen>

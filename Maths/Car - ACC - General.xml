@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Maths Locale="English_United States.1252" DefaultLocale="C" Id="Car - ACC - General">
+ <MathConstants>
+  <MathConstant Name="CdA" Value="0" Unit="" Comment="Drag coefficient per frontal area"/>
+  <MathConstant Name="MR Front" Value="1.0" Unit="ratio" Comment="Suspension Travel / Wheel Travel"/>
+  <MathConstant Name="MR Mono Front" Value="1.0" Unit="ratio" Comment="Suspension Travel / Wheel Travel"/>
+  <MathConstant Name="MR Mono Rear" Value="1.0" Unit="ratio" Comment="Suspension Travel / Wheel Travel"/>
+  <MathConstant Name="MR Rear" Value="1.0" Unit="ratio" Comment="Suspension Travel / Wheel Travel"/>
+  <MathConstant Name="Rod Length Front" Value="55.9495" Unit="mm" Comment="From setup JSON file"/>
+  <MathConstant Name="Rod Length Rear" Value="62.50" Unit="mm" Comment="From setup JSON file"/>
+  <MathConstant Name="Steer Ratio" Value="11" Unit="ratio"/>
+  <MathConstant Name="Toe Front" Value="0.1" Unit="deg" Comment="Positive outwards"/>
+  <MathConstant Name="Toe Rear" Value="-0.1" Unit="deg" Comment="Positive outwards"/>
+  <MathConstant Name="Track Width" Value="1.670" Unit="m"/>
+  <MathConstant Name="Track Width F" Value="1.670" Unit="m"/>
+  <MathConstant Name="Track Width R" Value="1.670" Unit="m"/>
+  <MathConstant Name="Wheelbase" Value="2.70" Unit="m"/>
+ </MathConstants>
+ <MathItems>
+  <MathExpression Id="Mass" DisplayUnit="kg" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'Vehicle Weight' [kg]" SampleRate="0" Unit="kg"/>
+  <MathExpression Id="Ride Height Offset F" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="13.7 + 'Rod Length Front' [mm]" SampleRate="0" Unit="mm"/>
+  <MathExpression Id="Ride Height Offset R" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="26.8 + 'Rod Length Rear' [mm]" SampleRate="0" Unit="mm"/>
+ </MathItems>
+</Maths>

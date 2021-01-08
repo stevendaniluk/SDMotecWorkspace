@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Maths Locale="English_United States.1252" DefaultLocale="C" Id="Aero">
+ <MathConstants>
+  <MathConstant Name="Air Density" Value="1.225" Unit="kg/m3"/>
+ </MathConstants>
+ <MathItems>
+  <MathExpression Id="Drag Force" DisplayUnit="N" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" Script="0.5 * 'Air Density' [kg/m3] * 'CdA' [] * sqr('Speed' [m/s])" SampleRate="0" Unit="N"/>
+  <MathExpression Id="Drag Power" DisplayUnit="kW" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" Script="'Speed' [m/s] * 'Drag Force' [N]" SampleRate="0" Unit="W"/>
+ </MathItems>
+</Maths>

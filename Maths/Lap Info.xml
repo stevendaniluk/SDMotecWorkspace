@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Maths Locale="English_United States.1252" DefaultLocale="C" Id="Lap Info">
+ <MathConstants>
+  <MathConstant Name="PI" Value="3.14159265" Unit=""/>
+ </MathConstants>
+ <MathItems>
+  <MathExpression Id="Lap Distance" DisplayUnit="km" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script=" stat_end('Corr Dist' [m], 1, range_change(&quot;Outings:Laps&quot;)) - stat_start('Corr Dist' [m], 1, range_change(&quot;Outings:Laps&quot;))" SampleRate="0" Unit="m"/>
+  <MathExpression Id="Lap Time" DisplayUnit="s" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="stat_max(integrate((1 + 'Throttle' [%]) / (1 + 'Throttle' [%]), 1, range_change(&quot;Outings:Laps&quot;)), 1, range_change(&quot;Outings:Laps&quot;))" SampleRate="0" Unit="s"/>
+ </MathItems>
+</Maths>

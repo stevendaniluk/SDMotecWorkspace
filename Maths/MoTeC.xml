@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<Maths Locale="English_United States.1252" DefaultLocale="C" Id="MoTeC" Flags="512">
+ <MathItems>
+  <MathExpression Active="0" Id="Oversteer" DisplayUnit="deg" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="smooth(choose('Corr Speed'[km/h] &lt; 50, 0, sgn('G Force Lat'[m/s/s]) * (('Vehicle Wheelbase'[m] * 'G Force Lat'[m/s/s] / sqr('Corr Speed'[m/s])) - sgn(stat_mean('Steered Angle'[rad] * 'G Force Lat'[m/s/s])) * 'Steered Angle'[rad])), 0.2)" SampleRate="0" Unit="rad"/>
+  <MathExpression Active="0" Id="Oversteer (Speed Weighted)" DisplayUnit="deg" DisplayDPS="2" DisplayColorIndex="1" Interpolate="1" Script="'Corr Speed'[km/h] / 80 * 'Oversteer'[deg]" SampleRate="0" Unit="deg"/>
+  <MathExpression Active="0" Id="Inverse Corner Radius" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="choose('Corr Speed' [km/h] &gt; 30, 'G Force Lat' [m/s/s] / ('Corr Speed' [m/s]^2), 0.0)" SampleRate="0" Unit=""/>
+  <MathExpression Active="0" Id="Yaw Rate" DisplayUnit="deg/s" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="choose('Corr Speed' [km/h] &gt; 30, 'G Force Lat' [m/s/s] / 'Corr Speed' [m/s], 0.0)" SampleRate="0" Unit="rad/s"/>
+ </MathItems>
+</Maths>
