@@ -19,6 +19,6 @@
  <Column Keyword="Vehicle Desc" Flags="0"/>
  <Column Keyword="Vehicle Type" Flags="0"/>
  <Column Keyword="Fastest Lap" Flags="0"/>
- <Column Keyword="Total Laps" Flags="0"/>
+ <Column Keyword="Total Laps" Flags="1"/>
  <Column Keyword="Venue Category" Flags="0"/>
 </Columns>
