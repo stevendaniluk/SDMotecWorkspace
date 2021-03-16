@@ -53,12 +53,12 @@
   <MathExpression Id="Temp Air" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="'AirTemp' [C]" SampleRate="0" Unit="C"/>
   <MathExpression Id="Temp Track" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" Script="'TrackTemp' [C]" SampleRate="0" Unit="C"/>
   <MathExpression Id="Throttle" DisplayUnit="%" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="'Throttle Pos' [%]" SampleRate="0" Unit="%"/>
-  <MathExpression Id="Tire Pressure FL" DisplayUnit="psi" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'LFpressure' [kPa]" SampleRate="0" Unit="kPa"/>
-  <MathExpression Id="Tire Pressure FR" DisplayUnit="psi" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'RFpressure' [kPa]
+  <MathExpression Id="Tire Pressure FL" DisplayUnit="kPa" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'LFpressure' [kPa]" SampleRate="0" Unit="kPa"/>
+  <MathExpression Id="Tire Pressure FR" DisplayUnit="kPa" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'RFpressure' [kPa]
 " SampleRate="0" Unit="kPa"/>
-  <MathExpression Id="Tire Pressure RL" DisplayUnit="psi" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'LRpressure' [kPa]
+  <MathExpression Id="Tire Pressure RL" DisplayUnit="kPa" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'LRpressure' [kPa]
 " SampleRate="0" Unit="kPa"/>
-  <MathExpression Id="Tire Pressure RR" DisplayUnit="psi" DisplayDPS="2" DisplayColorIndex="1" Interpolate="1" Script="'RRpressure' [kPa]
+  <MathExpression Id="Tire Pressure RR" DisplayUnit="kPa" DisplayDPS="2" DisplayColorIndex="1" Interpolate="1" Script="'RRpressure' [kPa]
 " SampleRate="0" Unit="kPa"/>
   <MathExpression Id="Tire Temp Avg FL" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="('Tyre Temp FL Centre' [C] + 'Tyre Temp FL Inner' [C] + 'Tyre Temp FL Outer' [C]) / 3" SampleRate="0" Unit="C"/>
   <MathExpression Id="Tire Temp Avg FR" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="('Tyre Temp FR Centre' [C] + 'Tyre Temp FR Inner' [C] + 'Tyre Temp FR Outer' [C]) / 3" SampleRate="0" Unit="C"/>
