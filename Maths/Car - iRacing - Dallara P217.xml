@@ -1,18 +1,19 @@
 <?xml version="1.0"?>
-<Maths Locale="English_United States.1252" DefaultLocale="C" Id="_Template_Vehicle" Flags="703">
+<Maths Locale="English_United States.1252" DefaultLocale="C" Id="Car - iRacing - Dallara P217" Condition="'Vehicle Id' == &quot;dallarap217&quot;">
  <MathConstants>
   <MathConstant Name="CdA" Value="0" Unit="" Comment="Drag coefficient per frontal area"/>
+  <MathConstant Name="CdA (1)" Value="0" Unit="" Comment="Drag coefficient per frontal area"/>
   <MathConstant Name="Mass" Value="0" Unit="kg"/>
   <MathConstant Name="MR Front" Value="1.0" Unit="ratio" Comment="Suspension Travel / Wheel Travel"/>
   <MathConstant Name="MR Mono Front" Value="1.0" Unit="ratio" Comment="Suspension Travel / Wheel Travel"/>
   <MathConstant Name="MR Mono Rear" Value="1.0" Unit="ratio" Comment="Suspension Travel / Wheel Travel"/>
   <MathConstant Name="MR Rear" Value="1.0" Unit="ratio" Comment="Suspension Travel / Wheel Travel"/>
-  <MathConstant Name="Steer Ratio" Value="0" Unit="ratio"/>
+  <MathConstant Name="Steer Ratio" Value="11" Unit="ratio"/>
   <MathConstant Name="Toe Front" Value="0.0" Unit="deg" Comment="Positive outwards"/>
   <MathConstant Name="Toe Rear" Value="0.0" Unit="deg" Comment="Positive outwards"/>
-  <MathConstant Name="Track Width" Value="0" Unit="m"/>
-  <MathConstant Name="Track Width F" Value="0" Unit="m"/>
-  <MathConstant Name="Track Width R" Value="0" Unit="m"/>
-  <MathConstant Name="Wheelbase" Value="0" Unit="m"/>
+  <MathConstant Name="Track Width" Value="1.7" Unit="m"/>
+  <MathConstant Name="Track Width F" Value="1.7" Unit="m"/>
+  <MathConstant Name="Track Width R" Value="1.7" Unit="m"/>
+  <MathConstant Name="Wheelbase" Value="2.70" Unit="m"/>
  </MathConstants>
 </Maths>

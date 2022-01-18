@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Maths Locale="English_United States.1252" DefaultLocale="C" Id="Internal" Flags="196">
  <MathItems>
-  <MathPlugin ProgId="MoTeC.GPSMaths.1.0" Params="V2:GPS Latitude:GPS Longitude:GPS Speed:1:1:a:0:0.8:[GPS Heading;GPS Time]:0:GPS Sats Used:0::0:0:[]"/>
+  <MathPlugin ProgId="MoTeC.GPSMaths.1.0" Params="V2:GPS Latitude:GPS Longitude:GPS Speed:1:1:a:0:0.8:[GPS Heading;GPS Time]:0:GPS Sats Used:0::0:0:[]:0:GPS Date:GPS Time:0"/>
   <MathPlugin ProgId="MoTeC.CircuitMaths.1.3" Params="4:0;Wheel Speed FL;Wheel Speed FR:1:[SPEED;Ground Speed;Wheel Speed FL;Wheel Speed FR;Wheel Speed Front;Wheel Speed;Wheel Speed RL;Wheel Speed RR;Wheel Speed Rear;Drive Speed;Dig In 1 Speed;Dig In 2 Speed]:0;GPS Speed:0;G Force Long;-1;0;0.5:0;Corr Speed;Lap Distance:1;5:1;1:0" SpeedClampMax="0" SpeedMax="0" SpeedMaxInvalidate="0" SpeedClampMin="0" SpeedMin="0" SpeedMinInvalidate="0"/>
   <MathPlugin ProgId="MoTeC.SuspensionMaths.1.3" Params="1,0,1,Damper Pos FL,1,Damper Pos FR,1,Damper Pos RL,1,Damper Pos RR,1,Damper Pos FC,1,Damper Pos FC,50000,1,1"/>
  </MathItems>

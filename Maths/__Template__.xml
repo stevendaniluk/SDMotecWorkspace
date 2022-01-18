@@ -1,13 +1,27 @@
 <?xml version="1.0"?>
-<Maths Locale="English_United States.1252" DefaultLocale="C" Id="_Template_Sim" Flags="703">
+<Maths Locale="English_United States.1252" DefaultLocale="C" Id="__Template__" Flags="703">
  <MathConstants>
+  <MathConstant Name="CdA" Value="0" Unit="" Comment="Drag coefficient per frontal area"/>
+  <MathConstant Name="Mass" Value="0" Unit="kg"/>
+  <MathConstant Name="MR Front" Value="1.0" Unit="ratio" Comment="Suspension Travel / Wheel Travel"/>
+  <MathConstant Name="MR Mono Front" Value="1.0" Unit="ratio" Comment="Suspension Travel / Wheel Travel"/>
+  <MathConstant Name="MR Mono Rear" Value="1.0" Unit="ratio" Comment="Suspension Travel / Wheel Travel"/>
+  <MathConstant Name="MR Rear" Value="1.0" Unit="ratio" Comment="Suspension Travel / Wheel Travel"/>
   <MathConstant Name="PI" Value="3.14159265" Unit=""/>
+  <MathConstant Name="Steer Ratio" Value="0" Unit="ratio"/>
+  <MathConstant Name="Toe Front" Value="0.0" Unit="deg" Comment="Positive outwards"/>
+  <MathConstant Name="Toe Rear" Value="0.0" Unit="deg" Comment="Positive outwards"/>
+  <MathConstant Name="Track Width" Value="0" Unit="m"/>
+  <MathConstant Name="Track Width F" Value="0" Unit="m"/>
+  <MathConstant Name="Track Width R" Value="0" Unit="m"/>
+  <MathConstant Name="Wheelbase" Value="0" Unit="m"/>
  </MathConstants>
  <MathItems>
   <MathExpression Id="ABS" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
   <MathExpression Comment="+ve forwards (SAE convention)" Id="Accel Long" DisplayUnit="m/s/s" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="0" SampleRate="0" Unit="m/s/s"/>
   <MathExpression Comment="+ve to the vehicle right (SAE convention)" Id="Accel Lat" DisplayUnit="m/s/s" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="0" SampleRate="0" Unit="m/s/s"/>
   <MathExpression Comment="+ve downwards (SAE convention)" Id="Accel Vert" DisplayUnit="m/s/s" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="0" SampleRate="0" Unit="m/s/s"/>
+  <MathExpression Id="Battery Voltage" DisplayUnit="V" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="0" SampleRate="0" Unit="V"/>
   <MathExpression Id="Brake" DisplayUnit="%" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="0" SampleRate="0" Unit="%"/>
   <MathExpression Id="Brake Bias" DisplayUnit="%" DisplayDPS="2" DisplayColorIndex="1" Interpolate="1" Script="0" SampleRate="0" Unit="%"/>
   <MathExpression Id="Brake Temp FL" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="0" SampleRate="0" Unit="C"/>
@@ -32,6 +46,7 @@
   <MathExpression Id="Damper Rate FC" DisplayUnit="mm/s" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="0" SampleRate="0" Unit="mm/s"/>
   <MathExpression Id="Damper Rate RC" DisplayUnit="mm/s" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" Script="0" SampleRate="0" Unit="mm/s"/>
   <MathExpression Id="DRS" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
+  <MathExpression Id="Engine Coolant Temp" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="0" SampleRate="0" Unit="C"/>
   <MathExpression Id="Engine Oil Pressure" DisplayUnit="bar" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="0" SampleRate="0" Unit="bar"/>
   <MathExpression Id="Engine Oil Temp" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="0" SampleRate="0" Unit="C"/>
   <MathExpression Id="Fuel Level" DisplayUnit="l" DisplayDPS="2" DisplayColorIndex="6" Interpolate="1" Script="0" SampleRate="0" Unit="l"/>
@@ -47,6 +62,10 @@
   <MathExpression Id="HYS Deploy Active" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
   <MathExpression Id="Marker" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
   <MathExpression Id="Pit Limiter" DisplayDPS="2" DisplayColorIndex="6" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
+  <MathExpression Id="Ride Height FL" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="0" SampleRate="0" Unit="mm"/>
+  <MathExpression Id="Ride Height FR" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="0" SampleRate="0" Unit="mm"/>
+  <MathExpression Id="Ride Height RL" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="0" SampleRate="0" Unit="mm"/>
+  <MathExpression Id="Ride Height RR" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="1" Interpolate="1" Script="0" SampleRate="0" Unit="mm"/>
   <MathExpression Id="Ride Height F" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="0" SampleRate="0" Unit="mm"/>
   <MathExpression Id="Ride Height R" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" Script="0" SampleRate="0" Unit="mm"/>
   <MathExpression Id="RPM" DisplayUnit="rpm" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" Script="0" SampleRate="0" Unit="rpm"/>

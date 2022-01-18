@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <Maths Locale="English_United States.1252" DefaultLocale="C" Id="Dynamics">
  <MathItems>
-  <MathExpression Id="Wheel Angle Dynamics" DisplayUnit="deg" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="choose('Speed' [km/h] &gt; 30, atan2('Wheelbase' [m], 1 / 'Curvature Dynamic' [1/m]), 0)" SampleRate="0" Unit="rad"/>
+  <MathExpression Id="Wheel Angle Dynamics" DisplayUnit="deg" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="sgn('Curvature Dynamic' [1/m]) * choose(abs('Curvature Dynamic' [1/m]) &gt; 0.001 AND 'Speed' [km/h] &gt; 10, atan2('Wheelbase' [m], 1 / abs('Curvature Dynamic' [1/m])), 0)" SampleRate="0" Unit="rad"/>
   <MathExpression Id="Oversteer Angle" DisplayUnit="deg" DisplayDPS="2" DisplayColorIndex="1" Interpolate="1" Script="sgn('Wheel Angle Dynamics' [rad]) * ('Wheel Angle Dynamics' [rad] - 'Wheel Angle' [rad])" SampleRate="0" Unit="rad"/>
   <MathExpression Id="Oversteer Angle Lap Avg" DisplayUnit="deg" DisplayDPS="2" DisplayColorIndex="1" Interpolate="1" Script="stat_mean('Oversteer Angle' [deg], abs('Oversteer Angle' [deg]) &gt; 1, range_change(&quot;Outings:Laps&quot;))
 
 " SampleRate="0" Unit="deg"/>
   <MathExpression Id="Curvature Kinematic" DisplayUnit="1/m" DisplayDPS="3" DisplayColorIndex="3" Interpolate="1" Script="tan('Wheel Angle' [rad]) / 'Wheelbase' [m]" SampleRate="0" Unit="1/m"/>
-  <MathExpression Id="Curvature Dynamic" DisplayUnit="1/m" DisplayDPS="3" DisplayColorIndex="4" Interpolate="1" Script="smooth(choose('Speed' [km/h] &gt; 30, abs('Accel Lat' [m/s/s]) / sqr('Speed' [m/s]), 0), 0.1)" SampleRate="0" Unit="1/m"/>
+  <MathExpression Id="Curvature Dynamic" DisplayUnit="1/m" DisplayDPS="3" DisplayColorIndex="4" Interpolate="1" Script="smooth(choose('Speed' [km/h] &gt; 20, smooth('Accel Lat' [m/s/s], 0.1) / sqr('Speed' [m/s]), 0), 0.1)" SampleRate="0" Unit="1/m"/>
   <MathExpression Id="Curvature Dynamic Lap Avg" DisplayUnit="1/m" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="stat_mean(abs('Curvature Dynamic' [1/m]), abs('Curvature Dynamic' [1/m]) &gt; 0.002, range_change(&quot;Outings:Laps&quot;))
 
 

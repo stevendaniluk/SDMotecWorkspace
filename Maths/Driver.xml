@@ -9,11 +9,11 @@
   <MathExpression Id="Is Braking" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'Brake' [%] &gt; 0 AND 'G Long' [G] &lt; -0.1 AND 'Speed' [km/h] &gt; 5" SampleRate="0" Unit=""/>
   <MathExpression Id="Not Braking" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" Script="'Brake' [%] == 0" SampleRate="0" Unit=""/>
   <MathExpression Id="Pure Braking" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'G Long' [G] &lt; -0.3  AND 'G Lat Unsigned' [G] &lt; 0.5" SampleRate="0" Unit=""/>
-  <MathExpression Id="isWOT" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="'Throttle' [%]== 100" SampleRate="0" Unit=""/>
+  <MathExpression Id="isWOT" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="'Throttle' [%]&gt;= 95" SampleRate="0" Unit=""/>
   <MathExpression Id="isHalfWOT" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="'Throttle' [%] &gt;= 50" SampleRate="0" Unit=""/>
   <MathExpression Id="isMidThrottle" DisplayDPS="2" DisplayColorIndex="6" Interpolate="1" Script="'Throttle' [%] &gt;= 5  AND 'Throttle' [%] &lt;= 95" SampleRate="0" Unit=""/>
   <MathExpression Id="Steering Rate" DisplayUnit="deg/s" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="abs(derivative('Steer Angle' [rad], 0.3))" SampleRate="0" Unit="rad/s"/>
-  <MathExpression Id="Steering Rate Lap Avg" DisplayUnit="deg/s" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="stat_mean('Steering Rate' [deg/s], 1, range_change(&quot;Outings:Laps&quot;))" SampleRate="0" Unit="rad/s"/>
+  <MathExpression Id="Steering Rate Lap Avg" DisplayUnit="deg/s" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="stat_mean('Steering Rate' [deg/s], 1, range_change(&quot;Outings:Laps&quot;))" SampleRate="0" Unit="deg/s"/>
   <MathExpression Id="Brake Rate" DisplayUnit="%/s" DisplayDPS="2" DisplayColorIndex="1" Interpolate="1" Script="derivative('Brake' [%], 0.3)" SampleRate="0" Unit="%/s"/>
   <MathExpression Id="Brake Application Rate" DisplayUnit="%/s" DisplayDPS="2" DisplayColorIndex="1" Interpolate="1" Script="choose('Brake Rate' [%/s] &gt; 0, 'Brake Rate' [%/s], 0)" SampleRate="0" Unit="%/s"/>
   <MathExpression Id="Brake Release Rate" DisplayUnit="%/s" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="choose('Brake Rate' [%/s] &lt; 0, -'Brake Rate' [%/s], 0)" SampleRate="0" Unit="%/s"/>
@@ -25,6 +25,9 @@
 
 
 " SampleRate="0" Unit="%/s"/>
+  <MathExpression Id="Brake Changes" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="choose(sgn('Brake Rate' [%/s]) != 0, sgn(derivative(sgn('Brake Rate' [%/s]), 2)), 0)" SampleRate="0" Unit=""/>
+  <MathExpression Id="Brake Change Cumulative" DisplayDPS="2" DisplayColorIndex="6" Interpolate="1" Script="integrate(derivative('Brake Changes'), 'Brake Changes' &gt; 0, range_change(&quot;Outings:Laps&quot;))" SampleRate="0" Unit=""/>
+  <MathExpression Id="Brake Changes Lap Total" DisplayDPS="2" DisplayColorIndex="6" Interpolate="1" Script="stat_end('Brake Change Cumulative', 1, range_change(&quot;Outings:Laps&quot;))" SampleRate="0" Unit=""/>
   <MathExpression Id="Throttle Rate" DisplayUnit="%/s" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="derivative('Throttle' [%], 0.3)" SampleRate="0" Unit="%/s"/>
   <MathExpression Id="Throttle Application Rate" DisplayUnit="%/s" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="choose('Throttle Rate' [%/s] &gt; 0, 'Throttle Rate' [%/s], 0)" SampleRate="0" Unit="%/s"/>
   <MathExpression Id="Throttle Release Rate" DisplayUnit="%/s" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="choose('Throttle Rate' [%/s] &lt; 0, -'Throttle Rate' [%/s], 0)" SampleRate="0" Unit="%/s"/>
@@ -36,6 +39,9 @@
 
 
 " SampleRate="0" Unit="%/s"/>
+  <MathExpression Id="Throttle Changes" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="choose(sgn('Throttle Rate' [%/s]) != 0, sgn(derivative(sgn('Throttle Rate' [%/s]), 2)), 0)" SampleRate="0" Unit=""/>
+  <MathExpression Id="Throttle Change Cumulative" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" Script="integrate(derivative('Throttle Changes'), 'Throttle Changes' &gt; 0, range_change(&quot;Outings:Laps&quot;))" SampleRate="0" Unit=""/>
+  <MathExpression Id="Throttle Changes Lap Total" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" Script="stat_end('Throttle Change Cumulative', 1, range_change(&quot;Outings:Laps&quot;))" SampleRate="0" Unit=""/>
   <MathExpression Id="WOT Time" DisplayUnit="s" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="integrate(choose('isWOT', 'Throttle' [%] / 'Throttle' [%], 0), 1, range_change(&quot;Outings:Laps&quot;))" SampleRate="0" Unit="s"/>
   <MathExpression Id="WOT Time Lap Total" DisplayUnit="s" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="stat_max('WOT Time' [s], 1, range_change(&quot;Outings:Laps&quot;))" SampleRate="0" Unit="s"/>
  </MathItems>

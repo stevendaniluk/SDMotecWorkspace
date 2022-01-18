@@ -8,6 +8,7 @@
  <Override Id="Bat Volts ADL" DisplayMax="15.000000000000000" DisplayMin="10.000000000000000" AutoScale="0"/>
  <Override Id="Corr Speed" DisplayMax="69.444444444444443" DisplayMin="0.000000000000000" AutoScale="0" DisplayColorIndex="3"/>
  <Override Id="Damper Vel FL" AutoScale="0" DisplayMin="-0.200000000000000" DisplayMax="0.200000000000000"/>
+ <Override Id="Dash G Force Lat" DisplayColorIndex="0"/>
  <Override Id="Eng Oil Pres" DisplayMax="600000.000000000000000" DisplayMin="0.000000000000000" AutoScale="0"/>
  <Override Id="Eng Oil Temp" DisplayMax="382.149993999999992" DisplayMin="272.149993999999992" AutoScale="0"/>
  <Override Id="Engine RPM" DisplayMax="837.758057000000008" DisplayMin="0.000000000000000" AutoScale="0"/>

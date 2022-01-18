@@ -1,27 +1,29 @@
-# SimRacingMotec
+# SDMotecWorkspace
 
-This is a MoTeC workspace configured for sim racing that is built to handle multiple games and provide an assortment of calculations for vehicle dynamics and performance.
+This is a MoTeC workspace configured to accept multiple data sources and provide an assortment of calculations for vehicle dynamics and performance.
 
 ## Setup Instructions
 
 1. Make sure you have [MoTeC i2 Pro](https://www.motec.com.au/i2/i2downloads/) installed
-1. Go to the [Releases page](https://github.com/stevendaniluk/SimRacingMotec/releases) and download the ZIP file for the latest release (or if you are familiar with git, do your thing)
-1. Unzip the downloaded file, and change the name removing the version number that gets appended because MoTeC can't handle "." characters (e.g. change it to *SimRacingMotec*)
+1. Go to the [Releases page](https://github.com/stevendaniluk/SDMotecWorkspace/releases) and download the ZIP file for the latest release (or if you are familiar with git, do your thing)
+1. Unzip the downloaded file, and change the name removing the version number that gets appended because MoTeC can't handle "." characters (e.g. change it to *SDMotecWorkspace*)
 1. Open MoTeC, go *File-->Workspace-->Open Workspace*, then select *Import*, navigate to the downloaded folder and select the *Workspace* file inside, this will import it into MoTeC for future use
-1. Select the *SimRacingMotec* workspace, then *OK* to open the workspace
+1. Select the *SDMotecWorkspace* workspace, then *OK* to open the workspace
 1. Navigate to the *Notes* workbook for further instructions
 
 *Note: If using iRacing you will also need to install [Mu Telementry Exporter](https://github.com/patrickmoore/Mu) to generate MoTeC log files.*
 
 ## Features
 
-### Multi Sim Support
+### Support For Multiple Data Sources
 
-The workspace uses individual math files to convert data produced by each sim to be in a consistent format. Which ensures that data is always available with the same units, colours, and coordinate conventions.
+The workspace is setup so that data can be easily analyzed from different sources (i.e. vehicles, simulators) without having to use different workspces. Meaning all the same calulcations and plots can be reused, and data is always available with the same units, colours, and coordinate conventions.
 
-Sim specific conversions are enabled/disabled by checking/unchecking the corresponding maths file in the *Maths Editor* (Ctrl + M). There are more instructions and details in the *Notes* workbook.
+Source specific conversions are enabled/disabled by checking/unchecking the corresponding maths file in the *Maths Editor* (Ctrl + M). There are more instructions and details in the *Notes* workbook.
 
-![Sim Math Editor](img/sim_math_editor.png)
+You can easily add your own car or simulator from the provided template file. This currently includes math files for the ACC and iRacing simulators.
+
+![Source Math Editor](img/source_math_editor.png)
 
 ### Calculations
 
@@ -38,7 +40,7 @@ A non exhaustive list of calculations:
    * Tire longitudnal slip
    * Actively loaded tire durations
 * Suspension:
-   * Damper velocity histograms 
+   * Damper velocity histograms
    * Ride height
    * Rake angle
    * Front and rear roll angles
@@ -81,7 +83,7 @@ Hybrid system energy usage and regeneration efficiency. You can monitor how the 
 
 ## Version History
 
+* **1.1.0**
+   * Minor update with a few additional channels, calculations, bug fixes, and additional track and vehicle info.
 * **1.0.0**
    * Initial version. Has support for ACC and iRacing outputs, general purpose cars for ACC and iRacing, and some sample cars from iRacing.
-
-
