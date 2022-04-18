@@ -18,7 +18,7 @@
   <MathExpression Id="Bumpstop FR" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
   <MathExpression Id="Bumpstop RL" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
   <MathExpression Id="Bumpstop RR" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
-  <MathExpression Id="Clutch" DisplayUnit="%" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'Clutch Pedal Pos' [%]" SampleRate="0" Unit="%"/>
+  <MathExpression Id="Clutch" DisplayUnit="%" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="100 - 'Clutch Pedal Pos' [%]" SampleRate="0" Unit="%"/>
   <MathExpression Id="Damper Pos FL" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'LFshockDefl' [m]
 " SampleRate="0" Unit="m"/>
   <MathExpression Id="Damper Pos FR" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'RFshockDefl' [m]
@@ -37,7 +37,7 @@
   <MathExpression Id="Engine Oil Temp" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'Eng Oil Temp' [C]" SampleRate="0" Unit="C"/>
   <MathExpression Id="Fuel Level" DisplayUnit="l" DisplayDPS="2" DisplayColorIndex="6" Interpolate="1" Script="'FuelLevel' [l]" SampleRate="0" Unit="l"/>
   <MathExpression Id="Fuel Pressure" DisplayUnit="bar" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'FuelPress' [bar]" SampleRate="0" Unit="bar"/>
-  <MathExpression Id="Gear" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'Gear'" SampleRate="0" Unit=""/>
+  <MathExpression Id="Gear" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="choose('Gear' != 0, 'Gear', invalid())" SampleRate="0" Unit=""/>
   <MathExpression Id="Gyro Pitch Rate" DisplayUnit="deg/s" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'Gyro - Pitch Velocity' [rad/s]" SampleRate="0" Unit="rad/s"/>
   <MathExpression Id="Gyro Roll Rate" DisplayUnit="deg/s" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'Gyro - Roll Velocity' [rad/s]" SampleRate="0" Unit="rad/s"/>
   <MathExpression Comment="+ve turns right" Id="Gyro Yaw Rate" DisplayUnit="deg/s" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="-'Gyro - Yaw Velocity' [rad/s]" SampleRate="0" Unit="rad/s"/>
