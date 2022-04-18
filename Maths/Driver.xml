@@ -43,6 +43,6 @@
   <MathExpression Id="Throttle Change Cumulative" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" Script="integrate(derivative('Throttle Changes'), 'Throttle Changes' &gt; 0, range_change(&quot;Outings:Laps&quot;))" SampleRate="0" Unit=""/>
   <MathExpression Id="Throttle Changes Lap Total" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" Script="stat_end('Throttle Change Cumulative', 1, range_change(&quot;Outings:Laps&quot;))" SampleRate="0" Unit=""/>
   <MathExpression Id="WOT Time" DisplayUnit="s" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="integrate(choose('isWOT', 'Throttle' [%] / 'Throttle' [%], 0), 1, range_change(&quot;Outings:Laps&quot;))" SampleRate="0" Unit="s"/>
-  <MathExpression Id="WOT Time Lap Total" DisplayUnit="s" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="stat_max('WOT Time' [s], 1, range_change(&quot;Outings:Laps&quot;))" SampleRate="0" Unit="s"/>
+  <MathExpression Id="WOT Time Lap Total" DisplayUnit="%" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="stat_max('WOT Time' [s], 1, range_change(&quot;Outings:Laps&quot;)) / 'Lap Time' [s]" SampleRate="0" Unit="%"/>
  </MathItems>
 </Maths>
