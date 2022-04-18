@@ -42,6 +42,9 @@
   <MathExpression Id="HYS Battery Energy" DisplayUnit="MJ" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="0" SampleRate="0" Unit="J"/>
   <MathExpression Id="HYS Deploy Energy" DisplayUnit="MJ" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="0" SampleRate="0" Unit="J"/>
   <MathExpression Id="HYS Deploy Active" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
+  <MathExpression Id="Lap Delta" DisplayUnit="s" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="0" SampleRate="0" Unit="s"/>
+  <MathExpression Id="Lap Delta Gradient" DisplayUnit="ratio" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" EnumerationName="" Script="derivative('Lap Delta' [s], 'Running Lap Time' [s], 50)" SampleRate="0" Unit="ratio"/>
+  <MathExpression Id="Lap Time Predicted" DisplayUnit="s" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" Script="0" SampleRate="0" Unit="s"/>
   <MathExpression Id="Marker" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
   <MathExpression Id="Pit Limiter" DisplayDPS="2" DisplayColorIndex="6" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
   <MathExpression Id="Ride Height F" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="'Ride Height Offset F' [mm] - 0.5 * ('Damper Pos FL' [mm] + 'Damper Pos FR' [mm]) * 'MR Front' [ratio]" SampleRate="0" Unit="mm"/>
