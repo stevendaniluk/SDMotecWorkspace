@@ -20,5 +20,11 @@
   <MathExpression Id="Brake Temp Speed R" DisplayUnit="C/s" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" Script="('Brake Temp Speed RL' [C/s] + 'Brake Temp Speed RR' [C/s]) / 2" SampleRate="0" Unit="C/s"/>
   <MathExpression Id="Decel Brake Gradient" DisplayUnit="%/G" DisplayDPS="2" DisplayColorIndex="1" Interpolate="1" Script="choose('G Long'[G] &lt; -0.1 AND 'Speed' [km/h] &gt; 5, 'Brake' [%] / abs('G Long' [G]), 0)" SampleRate="0" Unit="%/G"/>
   <MathExpression Id="Decel Brake Gradient Lap Avg" DisplayUnit="%/G" DisplayDPS="2" DisplayColorIndex="1" Interpolate="1" Script="stat_mean( 'Brake' [%] / abs('G Long' [G]), 'Is Braking', range_change(&quot;Outings:Laps&quot;))" SampleRate="0" Unit="%/G"/>
+  <MathExpression Id="Braking Force" DisplayUnit="N" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="choose('Is Braking', -'Tractive Force' [N], 0)" SampleRate="0" Unit="N"/>
+  <MathExpression Id="Braking Force Application" DisplayUnit="N" DisplayDPS="2" DisplayColorIndex="1" Interpolate="1" Script="choose('Brake Application Rate' [%/s] &gt; 0, -'Tractive Force' [N], invalid())" SampleRate="0" Unit="N"/>
+  <MathExpression Id="Braking Force Release" DisplayUnit="N" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="choose('Brake Release Rate' [%/s] &gt; 0, -'Tractive Force' [N], invalid())" SampleRate="0" Unit="N"/>
+  <MathExpression Id="Braking Power" DisplayUnit="kW" DisplayDPS="2" DisplayColorIndex="1" Interpolate="1" Script="'Braking Force' [N] * 'Speed' [m/s]" SampleRate="0" Unit="W"/>
+  <MathExpression Id="Braking Energy" DisplayUnit="MJ" DisplayDPS="2" DisplayColorIndex="6" Interpolate="1" Script="integrate('Braking Power' [W], 1, range_change(&quot;Outings:Laps&quot;))" SampleRate="0" Unit="J"/>
+  <MathExpression Id="Braking Energy Session Total" DisplayUnit="MJ" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" Script="integrate('Braking Power' [W])" SampleRate="0" Unit="J"/>
  </MathItems>
 </Maths>
