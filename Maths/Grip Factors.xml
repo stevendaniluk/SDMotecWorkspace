@@ -5,7 +5,7 @@
  </MathConstants>
  <MathItems>
   <MathExpression Id="Grip Factor Overall" DisplayUnit="G" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'G Combined' [G]" SampleRate="0" Unit="G"/>
-  <MathExpression Id="Grip Factor Braking" DisplayUnit="G" DisplayDPS="2" DisplayColorIndex="1" Interpolate="1" Script="choose('Brake' [%] &gt; 30,'Grip Factor Overall' [G], invalid())" SampleRate="0" Unit="G"/>
+  <MathExpression Id="Grip Factor Braking" DisplayUnit="G" DisplayDPS="2" DisplayColorIndex="1" Interpolate="1" Script="choose('Brake' [%] &gt; 20,'Grip Factor Overall' [G], invalid())" SampleRate="0" Unit="G"/>
   <MathExpression Id="Grip Factor Cornering" DisplayUnit="G" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="choose('G Lat Unsigned' [G] &gt; 0.5,'Grip Factor Overall' [G], invalid())" SampleRate="0" Unit="G"/>
   <MathExpression Id="Grip Factor Traction" DisplayUnit="G" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="choose('G Long' [G] &gt; 0.05  AND 'G Lat Unsigned' [G] &gt; 0.5,'Grip Factor Overall' [G], invalid())" SampleRate="0" Unit="G"/>
   <MathExpression Id="Grip Factor Aero" DisplayUnit="G" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="choose('G Lat Unsigned' [G] &gt; 1.0  AND 'Speed' [km/h] &gt; 120,'Grip Factor Overall' [G], invalid())" SampleRate="0" Unit="G"/>

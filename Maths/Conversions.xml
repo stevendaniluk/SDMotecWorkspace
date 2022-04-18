@@ -15,6 +15,8 @@
   <MathExpression Id="G Lat Smooth Unsigned" DisplayUnit="G" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="smooth('G Lat Unsigned' [G], 0.2)" SampleRate="0" Unit="G"/>
   <MathExpression Id="G Long" DisplayUnit="G" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'Accel Long' [m/s/s]" SampleRate="0" Unit="m/s/s"/>
   <MathExpression Id="G Long Unsigned" DisplayUnit="G" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="abs('G Long' [G])" SampleRate="0" Unit="G"/>
+  <MathExpression Id="G Long Smooth" DisplayUnit="G" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="smooth('Accel Long' [m/s/s], 0.2)" SampleRate="0" Unit="m/s/s"/>
+  <MathExpression Id="G Long Smooth Unsigned" DisplayUnit="G" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="abs('G Long Smooth' [G])" SampleRate="0" Unit="m/s/s"/>
   <MathExpression Id="G Long Accel" DisplayUnit="G" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="choose('G Long' [G] &gt; 0, 'G Long' [G], 0)" SampleRate="0" Unit="G"/>
   <MathExpression Id="G Long Decel" DisplayUnit="G" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="choose('G Long' [G] &lt; 0, 'G Long' [G], 0)" SampleRate="0" Unit="G"/>
   <MathExpression Id="G Long Decel Unsigned" DisplayUnit="G" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="abs('G Long Decel' [G])" SampleRate="0" Unit="G"/>

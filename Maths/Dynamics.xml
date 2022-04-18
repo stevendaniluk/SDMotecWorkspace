@@ -7,7 +7,7 @@
 
 " SampleRate="0" Unit="deg"/>
   <MathExpression Id="Curvature Kinematic" DisplayUnit="1/m" DisplayDPS="3" DisplayColorIndex="3" Interpolate="1" Script="tan('Wheel Angle' [rad]) / 'Wheelbase' [m]" SampleRate="0" Unit="1/m"/>
-  <MathExpression Id="Curvature Dynamic" DisplayUnit="1/m" DisplayDPS="3" DisplayColorIndex="4" Interpolate="1" Script="smooth(choose('Speed' [km/h] &gt; 20, smooth('Accel Lat' [m/s/s], 0.1) / sqr('Speed' [m/s]), 0), 0.1)" SampleRate="0" Unit="1/m"/>
+  <MathExpression Id="Curvature Dynamic" DisplayUnit="1/m" DisplayDPS="3" DisplayColorIndex="4" Interpolate="1" Script="smooth(choose('Speed' [km/h] &gt; 10, smooth('Gyro Yaw Rate' [rad/s], 0.1) / 'Speed' [m/s], 0), 0.1)" SampleRate="0" Unit="1/m"/>
   <MathExpression Id="Curvature Dynamic Lap Avg" DisplayUnit="1/m" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="stat_mean(abs('Curvature Dynamic' [1/m]), abs('Curvature Dynamic' [1/m]) &gt; 0.002, range_change(&quot;Outings:Laps&quot;))
 
 
