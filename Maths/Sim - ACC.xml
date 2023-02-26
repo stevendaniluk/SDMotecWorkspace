@@ -7,10 +7,10 @@
   <MathExpression Comment="+ve downwards (SAE convention)" Id="Accel Vert" DisplayUnit="m/s/s" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="0" SampleRate="0" Unit="m/s/s"/>
   <MathExpression Id="Brake" DisplayUnit="%" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'BRAKE' [%]" SampleRate="0" Unit="%"/>
   <MathExpression Id="Brake Bias" DisplayUnit="%" DisplayDPS="2" DisplayColorIndex="1" Interpolate="1" Script="0" SampleRate="0" Unit="%"/>
-  <MathExpression Id="Brake Temp FL" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'BRAKE_TEMP_LF' [mm]" SampleRate="0" Unit="C"/>
-  <MathExpression Id="Brake Temp FR" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'BRAKE_TEMP_RF' [mm]" SampleRate="0" Unit="C"/>
-  <MathExpression Id="Brake Temp RL" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'BRAKE_TEMP_LR' [mm]" SampleRate="0" Unit="C"/>
-  <MathExpression Id="Brake Temp RR" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'BRAKE_TEMP_RR' [mm] " SampleRate="0" Unit="C"/>
+  <MathExpression Id="Brake Temp FL" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'BRAKE_TEMP_LF' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Brake Temp FR" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'BRAKE_TEMP_RF' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Brake Temp RL" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'BRAKE_TEMP_LR' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Brake Temp RR" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'BRAKE_TEMP_RR' [C] " SampleRate="0" Unit="C"/>
   <MathExpression Id="Bumpstop FL" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'BUMPSTOPUP_RIDE_LF' [..]" SampleRate="0" Unit=""/>
   <MathExpression Id="Bumpstop FR" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'BUMPSTOPUP_RIDE_RF' [..]" SampleRate="0" Unit=""/>
   <MathExpression Id="Bumpstop RL" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'BUMPSTOPUP_RIDE_LR' [..]" SampleRate="0" Unit=""/>
