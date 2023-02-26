@@ -568,18 +568,28 @@
       </Graph>
      </Graphs>
      <Cursor Version="1" Style="1" Snap="1"/>
-     <EvenWidthBandAxis PaletteMode="1" GradientMode="2" BandChanColor="0,0,0" AxisChanColor="0,0,0" Color1="64,64,255" Color2="255,64,64" ReversGradient="0" CentredBands="0" GreaterMaxBand="1" LessMinBand="1" Continuous="0" BandMode="1" DataMin="40" DataMax="140" BandWidth="10" BandCount="10">
+     <EvenWidthBandAxis PaletteMode="1" GradientMode="2" BandChanColor="0,0,0" AxisChanColor="0,0,0" Color1="64,64,255" Color2="255,64,64" ReversGradient="0" CentredBands="0" GreaterMaxBand="1" LessMinBand="1" Continuous="0" BandMode="1" DataMin="40" DataMax="140" BandWidth="5" BandCount="20">
       <ColorBand Flags="2" Min="40" Max="40" Color="64,64,255" Visible="1"/>
-      <ColorBand Flags="7" Min="40" Max="50" Color="64,136,255" Visible="1"/>
-      <ColorBand Flags="7" Min="50" Max="60" Color="64,203,255" Visible="1"/>
-      <ColorBand Flags="7" Min="60" Max="70" Color="64,255,236" Visible="1"/>
-      <ColorBand Flags="7" Min="70" Max="80" Color="64,255,169" Visible="1"/>
-      <ColorBand Flags="7" Min="80" Max="90" Color="64,255,98" Visible="1"/>
-      <ColorBand Flags="7" Min="90" Max="100" Color="98,255,64" Visible="1"/>
-      <ColorBand Flags="7" Min="100" Max="110" Color="169,255,64" Visible="1"/>
-      <ColorBand Flags="7" Min="110" Max="120" Color="236,255,64" Visible="1"/>
-      <ColorBand Flags="7" Min="120" Max="130" Color="255,203,64" Visible="1"/>
-      <ColorBand Flags="15" Min="130" Max="140" Color="255,136,64" Visible="1"/>
+      <ColorBand Flags="7" Min="40" Max="45" Color="64,102,255" Visible="1"/>
+      <ColorBand Flags="7" Min="45" Max="50" Color="64,136,255" Visible="1"/>
+      <ColorBand Flags="7" Min="50" Max="55" Color="64,174,255" Visible="1"/>
+      <ColorBand Flags="7" Min="55" Max="60" Color="64,207,255" Visible="1"/>
+      <ColorBand Flags="7" Min="60" Max="65" Color="64,245,255" Visible="1"/>
+      <ColorBand Flags="7" Min="65" Max="70" Color="64,255,226" Visible="1"/>
+      <ColorBand Flags="7" Min="70" Max="75" Color="64,255,193" Visible="1"/>
+      <ColorBand Flags="7" Min="75" Max="80" Color="64,255,155" Visible="1"/>
+      <ColorBand Flags="7" Min="80" Max="85" Color="64,255,117" Visible="1"/>
+      <ColorBand Flags="7" Min="85" Max="90" Color="64,255,83" Visible="1"/>
+      <ColorBand Flags="7" Min="90" Max="95" Color="83,255,64" Visible="1"/>
+      <ColorBand Flags="7" Min="95" Max="100" Color="117,255,64" Visible="1"/>
+      <ColorBand Flags="7" Min="100" Max="105" Color="155,255,64" Visible="1"/>
+      <ColorBand Flags="7" Min="105" Max="110" Color="193,255,64" Visible="1"/>
+      <ColorBand Flags="7" Min="110" Max="115" Color="226,255,64" Visible="1"/>
+      <ColorBand Flags="7" Min="115" Max="120" Color="255,245,64" Visible="1"/>
+      <ColorBand Flags="7" Min="120" Max="125" Color="255,207,64" Visible="1"/>
+      <ColorBand Flags="7" Min="125" Max="130" Color="255,174,64" Visible="1"/>
+      <ColorBand Flags="7" Min="130" Max="135" Color="255,136,64" Visible="1"/>
+      <ColorBand Flags="15" Min="135" Max="140" Color="255,102,64" Visible="1"/>
       <ColorBand Flags="1" Min="140" Max="140" Color="255,64,64" Visible="1"/>
      </EvenWidthBandAxis>
     </MoTeC.Color>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<Maths Locale="English_United States.1252" DefaultLocale="C" Id="Sim - ACC">
+<Maths Locale="English_United States.1252" DefaultLocale="C" Id="Sim - ACC" Flags="703">
  <MathItems>
   <MathExpression Id="ABS" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'ABS'" SampleRate="0" Unit=""/>
   <MathExpression Comment="+ve forwards (SAE convention)" Id="Accel Long" DisplayUnit="m/s/s" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'G_LON' [m/s2]" SampleRate="0" Unit="G"/>

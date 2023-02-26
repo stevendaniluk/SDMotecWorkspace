@@ -3,7 +3,7 @@
  <Resources/>
  <LatGTrackGen LateralGChannel="G Lat" InverseLateralG="1"/>
  <DataSelect SelectFastestOnLoad="1" DefaultShowDisabled="0" MainColorSource="0">
-  <Explore HRef="C:\MoTeC\Logged Data\Sonoma\"/>
+  <Explore HRef="C:\MoTeC\"/>
   <DataSources/>
   <View Name="Laps" Color="128,240,0" View="Laps"/>
   <View Name="Outings" Color="240,128,0" View="Outings"/>
