@@ -29,14 +29,16 @@
   <MathExpression Id="Damper Rate FC" DisplayUnit="mm/s" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="0" SampleRate="0" Unit="mm/s"/>
   <MathExpression Id="Damper Rate RC" DisplayUnit="mm/s" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" Script="0" SampleRate="0" Unit="mm/s"/>
   <MathExpression Id="DRS" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
-  <MathExpression Id="Engine Oil Pressure" DisplayUnit="bar" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="0" SampleRate="0" Unit="bar"/>
+  <MathExpression Id="Engine Oil Pressure" DisplayUnit="psi" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="0" SampleRate="0" Unit="bar"/>
   <MathExpression Id="Engine Oil Temp" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="0" SampleRate="0" Unit="C"/>
   <MathExpression Comment="Not logged, assume half tank" Id="Fuel Level" DisplayUnit="l" DisplayDPS="2" DisplayColorIndex="6" Interpolate="1" Script="60" SampleRate="0" Unit="l"/>
-  <MathExpression Id="Fuel Pressure" DisplayUnit="bar" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="0" SampleRate="0" Unit="bar"/>
+  <MathExpression Id="Fuel Pressure" DisplayUnit="psi" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="0" SampleRate="0" Unit="bar"/>
   <MathExpression Id="Gear" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'GEAR' [no]" SampleRate="0" Unit=""/>
   <MathExpression Id="Gyro Pitch Rate" DisplayUnit="deg/s" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="0" SampleRate="0" Unit="deg/s"/>
   <MathExpression Id="Gyro Roll Rate" DisplayUnit="deg/s" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="0" SampleRate="0" Unit="deg/s"/>
   <MathExpression Comment="+ve turns right" Id="Gyro Yaw Rate" DisplayUnit="deg/s" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="-'ROTY' [deg/s]" SampleRate="0" Unit="deg/s"/>
+  <MathExpression Id="Intake Air Temp" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="1" Interpolate="1" Script="0" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Intake Pressure" DisplayUnit="psi" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="0" SampleRate="0" Unit="psi"/>
   <MathExpression Id="HYS Battery" DisplayUnit="%" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="0" SampleRate="0" Unit="%"/>
   <MathExpression Id="HYS Deploy Limit" DisplayUnit="%" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="0" SampleRate="0" Unit="%"/>
   <MathExpression Id="HYS Battery Energy" DisplayUnit="MJ" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="0" SampleRate="0" Unit="J"/>
