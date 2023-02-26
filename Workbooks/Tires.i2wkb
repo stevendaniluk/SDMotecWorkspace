@@ -454,6 +454,137 @@
     </MoTeC.TimeDistance>
    </Controls>
   </Worksheet>
+  <Worksheet Version="200" Name="Temp Bands" LinkTo="Laps" LockByGPSTime="0">
+   <Controls Active="Color Time/Distance Graph">
+    <MoTeC.Color Version="100" Name="Color Time/Distance Graph" Caption="Tire Temp (1=Inside, 16=Outside)" PosPC="0,0,1000,1000" ShowCaption="1" AutoCaption="0" LinkZoom="1" ModeId="0" ShowDataLegend="1" ShowColorLegend="1" TelemetryZoom="0" TraceLineWidth="1" TracePointSize="3" TraceStyle="0" LinkCursor="1" LinkDatum="1" ShowKeyValues="1" ShowKeyStats="0" KeyMode="0" KeyPos="1" ShowGridLines="1" ShowXAxis="1" ShowXAxisScrollBar="0" ShowYAxis="1" ShowYAxisScrollBar="1" ShowMarkers="1" ShowVSP="0" ShowDeviveEvents="1" ShowBands="1" TOD.Show="0" TOD.Format.Time="%X" TOD.Format.Date="%d %b %Y" TOD.UTC="UTC Time" TOD.Offset.Type="0" TOD.Offset.Mins="0" TOD.TZ.Show="0" BandGroup="" BandMode="0" OverlapMode="0" VariancePos="0.25" VarianceAutoScale="1" ShowLaneLines="0">
+     <Graphs ActivateChild="Group 4">
+      <Graph Name="Group 1" ScaleMode="1" ScaleMin="0" ScaleMax="1">
+       <Edges Mode="0" TopEdge="0" BottomEdge="249"/>
+       <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
+       <Lines>
+        <Line Index="0" Enabled="1" Value="0" Color="0,0,0"/>
+        <Line Index="1" Enabled="0" Value="0" Color="0,0,248"/>
+        <Line Index="2" Enabled="0" Value="0" Color="248,0,0"/>
+       </Lines>
+       <Traces ActiveTrace="Tire Temp FL 16">
+        <Trace Id="Tire Temp FL 1" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp FL 2" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp FL 3" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp FL 4" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp FL 5" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp FL 6" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp FL 7" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp FL 8" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp FL 9" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp FL 10" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp FL 11" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp FL 12" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp FL 13" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp FL 14" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp FL 15" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp FL 16" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+       </Traces>
+      </Graph>
+      <Graph Name="Group 2" ScaleMode="1" ScaleMin="0" ScaleMax="1">
+       <Edges Mode="0" TopEdge="249" BottomEdge="499"/>
+       <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
+       <Lines>
+        <Line Index="0" Enabled="1" Value="0" Color="0,0,0"/>
+        <Line Index="1" Enabled="0" Value="0" Color="0,0,248"/>
+        <Line Index="2" Enabled="0" Value="0" Color="248,0,0"/>
+       </Lines>
+       <Traces ActiveTrace="Tire Temp FR 16">
+        <Trace Id="Tire Temp FR 1" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp FR 2" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp FR 3" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp FR 4" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp FR 5" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp FR 6" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp FR 7" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp FR 8" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp FR 9" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp FR 10" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp FR 11" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp FR 12" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp FR 13" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp FR 14" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp FR 15" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp FR 16" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+       </Traces>
+      </Graph>
+      <Graph Name="Group 3" ScaleMode="1" ScaleMin="0" ScaleMax="1">
+       <Edges Mode="0" TopEdge="499" BottomEdge="750"/>
+       <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
+       <Lines>
+        <Line Index="0" Enabled="1" Value="0" Color="0,0,0"/>
+        <Line Index="1" Enabled="0" Value="0" Color="0,0,248"/>
+        <Line Index="2" Enabled="0" Value="0" Color="248,0,0"/>
+       </Lines>
+       <Traces ActiveTrace="Tire Temp RL 16">
+        <Trace Id="Tire Temp RL 1" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp RL 2" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp RL 3" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp RL 4" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp RL 5" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp RL 6" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp RL 7" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp RL 8" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp RL 9" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp RL 10" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp RL 11" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp RL 12" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp RL 13" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp RL 14" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp RL 15" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp RL 16" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+       </Traces>
+      </Graph>
+      <Graph Name="Group 4" ScaleMode="1" ScaleMin="0" ScaleMax="1">
+       <Edges Mode="0" TopEdge="750" BottomEdge="1000"/>
+       <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
+       <Lines>
+        <Line Index="0" Enabled="1" Value="0" Color="0,0,0"/>
+        <Line Index="1" Enabled="0" Value="0" Color="0,0,248"/>
+        <Line Index="2" Enabled="0" Value="0" Color="248,0,0"/>
+       </Lines>
+       <Traces ActiveTrace="Tire Temp RR 16">
+        <Trace Id="Tire Temp RR 1" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp RR 2" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp RR 3" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp RR 4" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp RR 5" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp RR 6" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp RR 7" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp RR 8" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp RR 9" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp RR 10" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp RR 11" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp RR 12" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp RR 13" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp RR 14" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp RR 15" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Tire Temp RR 16" DisplayUnit="C" DisplayDPS="2" Visible="1"/>
+       </Traces>
+      </Graph>
+     </Graphs>
+     <Cursor Version="1" Style="1" Snap="1"/>
+     <EvenWidthBandAxis PaletteMode="1" GradientMode="2" BandChanColor="0,0,0" AxisChanColor="0,0,0" Color1="64,64,255" Color2="255,64,64" ReversGradient="0" CentredBands="0" GreaterMaxBand="1" LessMinBand="1" Continuous="0" BandMode="1" DataMin="40" DataMax="140" BandWidth="10" BandCount="10">
+      <ColorBand Flags="2" Min="40" Max="40" Color="64,64,255" Visible="1"/>
+      <ColorBand Flags="7" Min="40" Max="50" Color="64,136,255" Visible="1"/>
+      <ColorBand Flags="7" Min="50" Max="60" Color="64,203,255" Visible="1"/>
+      <ColorBand Flags="7" Min="60" Max="70" Color="64,255,236" Visible="1"/>
+      <ColorBand Flags="7" Min="70" Max="80" Color="64,255,169" Visible="1"/>
+      <ColorBand Flags="7" Min="80" Max="90" Color="64,255,98" Visible="1"/>
+      <ColorBand Flags="7" Min="90" Max="100" Color="98,255,64" Visible="1"/>
+      <ColorBand Flags="7" Min="100" Max="110" Color="169,255,64" Visible="1"/>
+      <ColorBand Flags="7" Min="110" Max="120" Color="236,255,64" Visible="1"/>
+      <ColorBand Flags="7" Min="120" Max="130" Color="255,203,64" Visible="1"/>
+      <ColorBand Flags="15" Min="130" Max="140" Color="255,136,64" Visible="1"/>
+      <ColorBand Flags="1" Min="140" Max="140" Color="255,64,64" Visible="1"/>
+     </EvenWidthBandAxis>
+    </MoTeC.Color>
+   </Controls>
+  </Worksheet>
   <Worksheet Version="200" Name="Temp vs Accel" LinkTo="Laps" LockByGPSTime="0">
    <Controls Active="Scatter (2)">
     <MoTeC.Scatter Version="100" Name="Scatter (2)" Caption="Temp Difference vs Accel" PosPC="500,213,1000,1000" ShowCaption="1" AutoCaption="0" LinkZoom="1" ModeId="0" ShowDataLegend="1" ShowColorLegend="1" TelemetryZoom="0" ActiveTrace="0" TileMode="1" TileActiveChan="0" TileAutoCols="0" TileCols="1" XChannel="G Lat" ZChannel="G Lat Unsigned" XScaleMode="0" YScaleMode="1" YScaleMin="0" YScaleMax="40" ZScaleMode="0" ShowPoints="1" ShowDensity="0" DensityBins="100" DensityFillColorMode="1" DensityFillColor1="64,64,255" DensityFillColor2="255,64,64" IntervalStat="0" IntervalStat.BinWidth="100" ShowGridLines="1" ShowGradient="1" ShowColorBinSamples="1" Style="2" Size="1" ShowLines="0" ShowRegEquation="0" LinePointMode="1" CursorStyle="3" RegressionType="0" RegressionParam="0" RegressionZero="0" RegressionDigits="3">
