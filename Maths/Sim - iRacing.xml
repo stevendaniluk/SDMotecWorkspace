@@ -85,14 +85,14 @@
   <MathExpression Id="Tire Temp Outside FR" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="'Tyre Temp FR Outer' [C]" SampleRate="0" Unit="C"/>
   <MathExpression Id="Tire Temp Outside RL" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="'Tyre Temp RL Outer' [C]" SampleRate="0" Unit="C"/>
   <MathExpression Id="Tire Temp Outside RR" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="'Tyre Temp RR Outer' [C]" SampleRate="0" Unit="C"/>
-  <MathExpression Id="Velocity Long" DisplayUnit="m/s" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'VelocityX' [m/s]" SampleRate="0" Unit="m/s"/>
-  <MathExpression Id="Velocity Lat" DisplayUnit="m/s" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'VelocityY' [m/s]
+  <MathExpression Id="Velocity Long" DisplayUnit="km/h" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'VelocityX' [m/s]" SampleRate="0" Unit="m/s"/>
+  <MathExpression Id="Velocity Lat" DisplayUnit="km/h" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'VelocityY' [m/s]
 " SampleRate="0" Unit="m/s"/>
-  <MathExpression Id="Wheel Speed FL" DisplayUnit="m/s" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'Wheel Speed FL' [m/s]" SampleRate="0" Unit="m/s"/>
-  <MathExpression Id="Wheel Speed FR" DisplayUnit="m/s" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'Wheel Speed FR' [m/s]
+  <MathExpression Id="Wheel Speed FL" DisplayUnit="km/h" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'Wheel Speed FL' [m/s]" SampleRate="0" Unit="m/s"/>
+  <MathExpression Id="Wheel Speed FR" DisplayUnit="km/h" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'Wheel Speed FR' [m/s]
 " SampleRate="0" Unit="m/s"/>
-  <MathExpression Id="Wheel Speed RL" DisplayUnit="m/s" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'Wheel Speed RL' [m/s]
+  <MathExpression Id="Wheel Speed RL" DisplayUnit="km/h" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'Wheel Speed RL' [m/s]
 " SampleRate="0" Unit="m/s"/>
-  <MathExpression Id="Wheel Speed RR" DisplayUnit="m/s" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'Wheel Speed RR' [m/s]" SampleRate="0" Unit="m/s"/>
+  <MathExpression Id="Wheel Speed RR" DisplayUnit="km/h" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'Wheel Speed RR' [m/s]" SampleRate="0" Unit="m/s"/>
  </MathItems>
 </Maths>
