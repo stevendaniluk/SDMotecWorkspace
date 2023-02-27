@@ -66,7 +66,8 @@
   <MathExpression Id="Lap Delta" DisplayUnit="s" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="0" SampleRate="0" Unit="s"/>
   <MathExpression Id="Lap Delta Gradient" DisplayUnit="ratio" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="derivative('Lap Delta' [s], 'Running Lap Time' [s], 50)" SampleRate="0" Unit="ratio"/>
   <MathExpression Id="Lap Time Predicted" DisplayUnit="s" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" Script="0" SampleRate="0" Unit="s"/>
-  <MathExpression Id="Marker" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
+  <MathExpression Id="Log Marker" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
+  <MathExpression Id="MIL" DisplayDPS="0" DisplayColorIndex="1" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
   <MathExpression Id="Pit Limiter" DisplayDPS="2" DisplayColorIndex="6" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
   <MathExpression Id="Ride Height FL" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="0" SampleRate="0" Unit="mm"/>
   <MathExpression Id="Ride Height FR" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="0" SampleRate="0" Unit="mm"/>
