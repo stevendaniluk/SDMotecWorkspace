@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<Maths Locale="English_United States.1252" DefaultLocale="C" Id="Car - STI" Flags="703">
+ <MathConstants>
+  <MathConstant Name="CdA" Value="0" Unit="" Comment="Drag coefficient per frontal area"/>
+  <MathConstant Name="Mass" Value="1600" Unit="kg"/>
+  <MathConstant Name="Motion Ratio Front" Value="2.136" Unit="ratio" Comment="Suspension Travel / Wheel Travel"/>
+  <MathConstant Name="Motion Ratio Rear" Value="1.668" Unit="ratio" Comment="Suspension Travel / Wheel Travel"/>
+  <MathConstant Name="PI" Value="3.14159265" Unit=""/>
+  <MathConstant Name="Ride Height Offset Front" Value="261.2" Unit="mm"/>
+  <MathConstant Name="Ride Height Offset Rear" Value="237.1" Unit="mm"/>
+  <MathConstant Name="Steer Ratio" Value="16" Unit="ratio"/>
+  <MathConstant Name="Toe Front" Value="0.0" Unit="deg" Comment="Positive outwards"/>
+  <MathConstant Name="Toe Rear" Value="0.0" Unit="deg" Comment="Positive outwards"/>
+  <MathConstant Name="Track Front" Value="1.55" Unit="m"/>
+  <MathConstant Name="Track Rear" Value="1.55" Unit="m"/>
+  <MathConstant Name="Wheelbase" Value="2.740" Unit="m"/>
+ </MathConstants>
+ <MathItems>
+  <MathExpression Id="ABS" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
+  <MathExpression Comment="+ve forwards (SAE convention)" Id="Accel Long" DisplayUnit="m/s/s" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="smooth('Acceleration X' [m/s/s], 10)" SampleRate="0" Unit="m/s/s"/>
+  <MathExpression Comment="+ve to the vehicle right (SAE convention)" Id="Accel Lat" DisplayUnit="m/s/s" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="smooth('Acceleration Y' [m/s/s], 10)" SampleRate="0" Unit="m/s/s"/>
+  <MathExpression Comment="+ve downwards (SAE convention)" Id="Accel Vert" DisplayUnit="m/s/s" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="smooth('Acceleration Z' [m/s/s], 5) + 9.80625" SampleRate="0" Unit="m/s/s"/>
+  <MathExpression Id="Battery Voltage" DisplayUnit="V" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'Bat Volts Dash' [V]" SampleRate="0" Unit="V"/>
+  <MathExpression Id="Brake" DisplayUnit="%" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'Brake Pedal' [%]" SampleRate="0" Unit="%"/>
+  <MathExpression Id="Brake Bias" DisplayUnit="%" DisplayDPS="2" DisplayColorIndex="1" Interpolate="1" Script="0" SampleRate="0" Unit="%"/>
+  <MathExpression Id="Brake Temp FL" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="0" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Brake Temp FR" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="0" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Brake Temp RL" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="0" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Brake Temp RR" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="0" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Bumpstop FL" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
+  <MathExpression Id="Bumpstop FR" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
+  <MathExpression Id="Bumpstop RL" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
+  <MathExpression Id="Bumpstop RR" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
+  <MathExpression Id="Clutch" DisplayUnit="%" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'Clutch Pedal' [%]" SampleRate="0" Unit="%"/>
+  <MathExpression Id="Damper Pos FL" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'Damper Pos FL' [mm]" SampleRate="0" Unit="mm"/>
+  <MathExpression Id="Damper Pos FR" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'Damper Pos FR' [mm]" SampleRate="0" Unit="mm"/>
+  <MathExpression Id="Damper Pos RL" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'Damper Pos RL' [mm]" SampleRate="0" Unit="mm"/>
+  <MathExpression Id="Damper Pos RR" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'Damper Pos RR' [mm]" SampleRate="0" Unit="mm"/>
+  <MathExpression Id="Damper Pos FC" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="0" SampleRate="0" Unit="mm"/>
+  <MathExpression Id="Damper Pos RC" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" Script="0" SampleRate="0" Unit="mm"/>
+  <MathExpression Id="Damper Rate FL" DisplayUnit="mm/s" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="derivative('Damper Pos FL' [mm], 10)" SampleRate="0" Unit="mm/s"/>
+  <MathExpression Id="Damper Rate FR" DisplayUnit="mm/s" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="derivative('Damper Pos FR' [mm], 10)" SampleRate="0" Unit="mm/s"/>
+  <MathExpression Id="Damper Rate RL" DisplayUnit="mm/s" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="derivative('Damper Pos RL' [mm], 10)" SampleRate="0" Unit="mm/s"/>
+  <MathExpression Id="Damper Rate RR" DisplayUnit="mm/s" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="derivative('Damper Pos RR' [mm], 10)" SampleRate="0" Unit="mm/s"/>
+  <MathExpression Id="Damper Rate FC" DisplayUnit="mm/s" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="0" SampleRate="0" Unit="mm/s"/>
+  <MathExpression Id="Damper Rate RC" DisplayUnit="mm/s" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" Script="0" SampleRate="0" Unit="mm/s"/>
+  <MathExpression Id="DRS" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
+  <MathExpression Id="Engine Oil Pressure" DisplayUnit="psi" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="0" SampleRate="0" Unit="bar"/>
+  <MathExpression Id="Engine Oil Temp" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'Engine Oil Temperature' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Engine Water Temp" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'Coolant Temperature' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Fastest Lap" DisplayUnit="s" DisplayDPS="2" DisplayColorIndex="6" Interpolate="1" Script="'Fastest Lap Time' [s]" SampleRate="0" Unit="s"/>
+  <MathExpression Id="Fuel Level" DisplayUnit="l" DisplayDPS="2" DisplayColorIndex="6" Interpolate="1" Script="'Fuel Level'[l]" SampleRate="0" Unit="l"/>
+  <MathExpression Id="Fuel Pressure" DisplayUnit="psi" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="0" SampleRate="0" Unit="bar"/>
+  <MathExpression Id="Gear" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'Gear'" SampleRate="0" Unit=""/>
+  <MathExpression Id="Gyro Pitch Rate" DisplayUnit="deg/s" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="0" SampleRate="0" Unit="deg/s"/>
+  <MathExpression Id="Gyro Roll Rate" DisplayUnit="deg/s" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="0" SampleRate="0" Unit="deg/s"/>
+  <MathExpression Comment="+ve turns right" Id="Gyro Yaw Rate" DisplayUnit="deg/s" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'Gyro Yaw Velocity' [rad/s]" SampleRate="0" Unit="rad/s"/>
+  <MathExpression Id="HYS Battery" DisplayUnit="%" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="0" SampleRate="0" Unit="%"/>
+  <MathExpression Id="HYS Deploy Limit" DisplayUnit="%" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="0" SampleRate="0" Unit="%"/>
+  <MathExpression Id="HYS Battery Energy" DisplayUnit="MJ" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="0" SampleRate="0" Unit="J"/>
+  <MathExpression Id="HYS Deploy Energy" DisplayUnit="MJ" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="0" SampleRate="0" Unit="J"/>
+  <MathExpression Id="HYS Deploy Active" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
+  <MathExpression Id="Intake Air Temp" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="1" Interpolate="1" Script="0" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Intake Pressure" DisplayUnit="psi" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'Boost Pressure' [kPa]" SampleRate="0" Unit="kPa"/>
+  <MathExpression Id="Lap Delta" DisplayUnit="s" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'Lap Gain/Loss Running' [s]" SampleRate="0" Unit="s"/>
+  <MathExpression Id="Lap Delta Gradient" DisplayUnit="ratio" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="derivative('Lap Delta' [s], 'Running Lap Time' [s], 50)" SampleRate="0" Unit="ratio"/>
+  <MathExpression Id="Lap Time Predicted" DisplayUnit="s" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" Script="'Lap Time Predicted' [s]" SampleRate="0" Unit="s"/>
+  <MathExpression Id="Marker" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
+  <MathExpression Id="Pit Limiter" DisplayDPS="2" DisplayColorIndex="6" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
+  <MathExpression Id="Ride Height FL" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'Ride Height Offset Front' [mm] - 'Damper Pos FL' [mm] * 'Motion Ratio Front' [ratio]" SampleRate="0" Unit="mm"/>
+  <MathExpression Id="Ride Height FR" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'Ride Height Offset Front' [mm] - 'Damper Pos FR' [mm] * 'Motion Ratio Front' [ratio]
+" SampleRate="0" Unit="mm"/>
+  <MathExpression Id="Ride Height RL" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'Ride Height Offset Rear' [mm] - 'Damper Pos RL' [mm] * 'Motion Ratio Rear' [ratio]" SampleRate="0" Unit="mm"/>
+  <MathExpression Id="Ride Height RR" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="1" Interpolate="1" Script="'Ride Height Offset Rear' [mm] - 'Damper Pos RR' [mm] * 'Motion Ratio Front' [ratio]" SampleRate="0" Unit="mm"/>
+  <MathExpression Id="Ride Height F" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="0.5 * ('Ride Height FL' [mm] + 'Ride Height FR' [mm])" SampleRate="0" Unit="mm"/>
+  <MathExpression Id="Ride Height R" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" Script="0.5 * ('Ride Height RL' [mm] + 'Ride Height RR' [mm])
+" SampleRate="0" Unit="mm"/>
+  <MathExpression Id="RPM" DisplayUnit="rpm" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" Script="'Engine RPM' [rpm]" SampleRate="0" Unit="rpm"/>
+  <MathExpression Id="Speed" DisplayUnit="km/h" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="'Ground Speed' [m/s]" SampleRate="0" Unit="m/s"/>
+  <MathExpression Comment="+ve turns right" Id="Steer Angle" DisplayUnit="rad" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'Steering Wheel Angle' [deg]" SampleRate="0" Unit="deg"/>
+  <MathExpression Id="TC" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
+  <MathExpression Id="Temp Air" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="0" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Temp Track" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" Script="0" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Throttle" DisplayUnit="%" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="'Throttle Pedal' [%]" SampleRate="0" Unit="%"/>
+  <MathExpression Id="Tire Pressure FL" DisplayUnit="psi" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'Tire Pressure FL' [psi]" SampleRate="0" Unit="psi"/>
+  <MathExpression Id="Tire Pressure FR" DisplayUnit="psi" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'Tire Pressure FR' [psi]" SampleRate="0" Unit="psi"/>
+  <MathExpression Id="Tire Pressure RL" DisplayUnit="psi" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'Tire Pressure RL' [psi]" SampleRate="0" Unit="psi"/>
+  <MathExpression Id="Tire Pressure RR" DisplayUnit="psi" DisplayDPS="2" DisplayColorIndex="1" Interpolate="1" Script="'Tire Pressure RR' [psi]" SampleRate="0" Unit="psi"/>
+  <MathExpression Id="Tire Temp Avg FL" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="('Tire Temp Inside FL' [C] + 'Tire Temp Center FL' [C] + 'Tire Temp Outside FL' [C]) / 3" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp Avg FR" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="('Tire Temp Inside FR' [C] + 'Tire Temp Center FR' [C] + 'Tire Temp Outside FR' [C]) / 3" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp Avg RL" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="('Tire Temp Inside RL' [C] + 'Tire Temp Center RL' [C] + 'Tire Temp Outside RL' [C]) / 3" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp Avg RR" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="('Tire Temp Inside RR' [C] + 'Tire Temp Center RR' [C] + 'Tire Temp Outside RR' [C]) / 3" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp Center FL" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'Tire Temp Middle FL' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp Center FR" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'Tire Temp Middle FR' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp Center RL" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'Tire Temp Middle RL' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp Center RR" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'Tire Temp Middle RR' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp Inside FL" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'Tire Temp Inner FL' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp Inside FR" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'Tire Temp Inner FR' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp Inside RL" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'Tire Temp Inner RL' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp Inside RR" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'Tire Temp Inner RR' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp Outside FL" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="'Tire Temp Outer FL' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp Outside FR" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="'Tire Temp Outer FR' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp Outside RL" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="'Tire Temp Outer RL' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp Outside RR" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="'Tire Temp Outer RR' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp FL 1" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'LF TTPMS T1' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp FL 2" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'LF TTPMS T2' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp FL 3" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'LF TTPMS T3' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp FL 4" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'LF TTPMS T4' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp FL 5" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'LF TTPMS T5' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp FL 6" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'LF TTPMS T6' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp FL 7" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'LF TTPMS T7' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp FL 8" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'LF TTPMS T8' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp FL 9" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'LF TTPMS T9' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp FL 10" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'LF TTPMS T10' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp FL 11" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'LF TTPMS T11' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp FL 12" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'LF TTPMS T12' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp FL 13" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'LF TTPMS T13' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp FL 14" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'LF TTPMS T14' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp FL 15" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'LF TTPMS T15' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp FL 16" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'LF TTPMS T16' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp FR 1" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'RF TTPMS T1' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp FR 2" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'RF TTPMS T2' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp FR 3" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'RF TTPMS T3' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp FR 4" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'RF TTPMS T4' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp FR 5" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'RF TTPMS T5' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp FR 6" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'RF TTPMS T6' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp FR 7" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'RF TTPMS T7' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp FR 8" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'RF TTPMS T8' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp FR 9" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'RF TTPMS T9' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp FR 10" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'RF TTPMS T10' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp FR 11" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'RF TTPMS T11' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp FR 12" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'RF TTPMS T12' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp FR 13" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'RF TTPMS T13' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp FR 14" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'RF TTPMS T14' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp FR 15" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'RF TTPMS T15' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp FR 16" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'RF TTPMS T16' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp RL 1" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'LR TTPMS T1' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp RL 2" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'LR TTPMS T2' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp RL 3" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'LR TTPMS T3' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp RL 4" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'LR TTPMS T4' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp RL 5" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'LR TTPMS T5' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp RL 6" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'LR TTPMS T6' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp RL 7" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'LR TTPMS T7' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp RL 8" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'LR TTPMS T8' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp RL 9" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'LR TTPMS T9' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp RL 10" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'LR TTPMS T10' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp RL 11" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'LR TTPMS T11' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp RL 12" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'LR TTPMS T12' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp RL 13" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'LR TTPMS T13' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp RL 14" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'LR TTPMS T14' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp RL 15" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'LR TTPMS T15' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp RL 16" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'LR TTPMS T16' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp RR 1" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'RR TTPMS T1' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp RR 2" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'RR TTPMS T2' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp RR 3" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'RR TTPMS T3' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp RR 4" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'RR TTPMS T4' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp RR 5" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'RR TTPMS T5' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp RR 6" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'RR TTPMS T6' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp RR 7" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'RR TTPMS T7' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp RR 8" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'RR TTPMS T8' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp RR 9" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'RR TTPMS T9' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp RR 10" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'RR TTPMS T10' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp RR 11" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'RR TTPMS T11' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp RR 12" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'RR TTPMS T12' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp RR 13" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'RR TTPMS T13' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp RR 14" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'RR TTPMS T14' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp RR 15" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'RR TTPMS T15' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Tire Temp RR 16" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'RR TTPMS T16' [C]" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Wheel Speed FL" DisplayUnit="m/s" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'Wheel Speed FL' [km/h]" SampleRate="0" Unit="km/h"/>
+  <MathExpression Id="Wheel Speed FR" DisplayUnit="m/s" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'Wheel Speed FR' [km/h]" SampleRate="0" Unit="km/h"/>
+  <MathExpression Id="Wheel Speed RL" DisplayUnit="m/s" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'Wheel Speed RL' [km/h]" SampleRate="0" Unit="km/h"/>
+  <MathExpression Id="Wheel Speed RR" DisplayUnit="m/s" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'Wheel Speed RR' [km/h]" SampleRate="0" Unit="km/h"/>
+ </MathItems>
+</Maths>
