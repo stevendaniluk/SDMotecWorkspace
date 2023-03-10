@@ -1,8 +1,5 @@
 <?xml version="1.0"?>
 <Maths Locale="English_United States.1252" DefaultLocale="C" Id="HYS">
- <MathConstants>
-  <MathConstant Name="PI" Value="3.14159265" Unit=""/>
- </MathConstants>
  <MathItems>
   <MathExpression Id="HYS Battery Lap End" DisplayUnit="%" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="stat_end('HYS Battery' [%], 1, range_change(&quot;Outings:Laps&quot;))" SampleRate="0" Unit="%"/>
   <MathExpression Id="HYS Deploy Lap End" DisplayUnit="%" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="stat_end('HYS Deploy' [%], 1, range_change(&quot;Outings:Laps&quot;))" SampleRate="0" Unit="%"/>

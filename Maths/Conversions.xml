@@ -6,6 +6,9 @@
    <Enum Name="B" Value="23"/>
   </MathEnumeration>
  </MathEnumerations>
+ <MathConstants>
+  <MathConstant Name="PI" Value="3.14159265" Unit=""/>
+ </MathConstants>
  <MathItems>
   <MathExpression Id="Steer Angle Deg" DisplayUnit="deg" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'Steer Angle' [rad]" SampleRate="0" Unit="rad"/>
   <MathExpression Id="Wheel Angle" DisplayUnit="deg" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'Steer Angle' [rad] / 'Steer Ratio' [ratio]" SampleRate="0" Unit="rad"/>
