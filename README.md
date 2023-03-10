@@ -82,7 +82,10 @@ Hybrid system energy usage and regeneration efficiency. You can monitor how the 
 ![HYS Regen](img/HYS_regen.png)
 
 ## Version History
-
+* **1.3.0**
+   * Assorted changes for naming and units of engine and setup variables. Adds more detailed tire temperature bands. Miscellaneous bug fixes.
+* **1.2.0**
+   * Additional lap timing calculations, plus fixes for a few calculations
 * **1.1.0**
    * Minor update with a few additional channels, calculations, bug fixes, and additional track and vehicle info.
 * **1.0.0**
