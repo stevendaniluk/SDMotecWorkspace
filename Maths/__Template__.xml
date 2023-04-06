@@ -44,6 +44,10 @@
   <MathExpression Id="Damper Pos RR" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="0" SampleRate="0" Unit="mm"/>
   <MathExpression Id="Damper Pos FC" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="0" SampleRate="0" Unit="mm"/>
   <MathExpression Id="Damper Pos RC" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" Script="0" SampleRate="0" Unit="mm"/>
+  <MathExpression Id="Damper Pos Front Min" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="0" SampleRate="0" Unit="mm"/>
+  <MathExpression Id="Damper Pos Front Max" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="0" SampleRate="0" Unit="mm"/>
+  <MathExpression Id="Damper Pos Rear Min" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" Script="0" SampleRate="0" Unit="mm"/>
+  <MathExpression Id="Damper Pos Rear Max" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" Script="0" SampleRate="0" Unit="mm"/>
   <MathExpression Id="Damper Rate FL" DisplayUnit="mm/s" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="0" SampleRate="0" Unit="mm/s"/>
   <MathExpression Id="Damper Rate FR" DisplayUnit="mm/s" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="0" SampleRate="0" Unit="mm/s"/>
   <MathExpression Id="Damper Rate RL" DisplayUnit="mm/s" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="0" SampleRate="0" Unit="mm/s"/>
