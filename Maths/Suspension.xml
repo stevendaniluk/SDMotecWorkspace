@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Maths Locale="English_United States.1252" DefaultLocale="C" Id="Suspension">
  <MathItems>
-  <MathExpression Id="Roll Susp F" DisplayUnit="deg" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="atan2('Damper Pos FR' [mm] / 'Motion Ratio Front' [ratio] - 'Damper Pos FL' [mm] / 'Motion Ratio Front [ratio], 'Track Front' [mm])" SampleRate="0" Unit="rad"/>
+  <MathExpression Id="Roll Susp F" DisplayUnit="deg" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="atan2('Damper Pos FR' [mm] / 'Motion Ratio Front' [ratio] - 'Damper Pos FL' [mm] / 'Motion Ratio Rear' [ratio], 'Track Front' [mm])" SampleRate="0" Unit="rad"/>
   <MathExpression Id="Roll Susp R" DisplayUnit="deg" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" Script="atan2('Damper Pos RR' [mm] / 'Motion Ratio Rear' [ratio] - 'Damper Pos RL' [mm] / 'Motion Ratio Rear' [ratio], 'Track Rear' [mm])" SampleRate="0" Unit="rad"/>
   <MathExpression Id="Roll Susp Combined" DisplayUnit="deg" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="atan2('Damper Pos FR' [mm] / 'Motion Ratio Front' [ratio] - 'Damper Pos RL' [mm] / 'Motion Ratio Rear' [ratio] + 'Damper Pos RR' [mm] / 'Motion Ratio Rear' [ratio] - 'Damper Pos FL' [mm] / 'Motion Ratio Front' [ratio], 'Track Front' [mm] + 'Track Rear' [mm])" SampleRate="0" Unit="rad"/>
   <MathExpression Id="Roll Rate Susp F" DisplayUnit="deg/s" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="derivative(smooth('Roll Susp F' [deg], 0.5))" SampleRate="0" Unit="deg/s"/>
