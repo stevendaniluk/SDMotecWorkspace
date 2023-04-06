@@ -326,9 +326,9 @@
   <Worksheet Version="200" Name="Long Wheel Slip" LinkTo="Laps" DataDomain="1" LockByGPSTime="0">
    <Controls Active="Time/Distance Graph">
     <MoTeC.TimeDistance Version="100" Name="Time/Distance Graph" PosPC="0,0,575,1000" ShowCaption="0" AutoCaption="0" LinkZoom="1" ModeId="0" ShowDataLegend="1" ShowColorLegend="1" TelemetryZoom="0" TraceLineWidth="1" TracePointSize="3" TraceStyle="0" LinkCursor="1" LinkDatum="1" ShowKeyValues="1" ShowKeyStats="0" KeyMode="0" KeyPos="1" ShowGridLines="1" ShowXAxis="1" ShowXAxisScrollBar="0" ShowYAxis="1" ShowYAxisScrollBar="1" ShowMarkers="1" ShowVSP="0" ShowDeviveEvents="1" ShowBands="1" TOD.Show="0" TOD.Format.Time="%X" TOD.Format.Date="%d %b %Y" TOD.UTC="UTC Time" TOD.Offset.Type="0" TOD.Offset.Mins="0" TOD.TZ.Show="0" BandGroup="Outings:Laps:Track Sections:Default" BandMode="1" OverlapMode="0" VariancePos="0.25" VarianceAutoScale="1">
-     <Graphs ActivateChild="Group 1">
+     <Graphs ActivateChild="Group 3">
       <Graph Name="Group 6" ScaleMode="2" ScaleMin="0" ScaleMax="1">
-       <Edges Mode="0" TopEdge="0" BottomEdge="227"/>
+       <Edges Mode="0" TopEdge="0" BottomEdge="190"/>
        <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
        <Lines>
         <Line Index="0" Enabled="1" Value="0" Color="210,210,210"/>
@@ -340,7 +340,7 @@
        </Traces>
       </Graph>
       <Graph Name="Group 5" ScaleMode="2" ScaleMin="-4" ScaleMax="4">
-       <Edges Mode="0" TopEdge="227" BottomEdge="423"/>
+       <Edges Mode="0" TopEdge="190" BottomEdge="354"/>
        <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
        <Lines>
         <Line Index="0" Enabled="1" Value="0" Color="210,210,210"/>
@@ -353,7 +353,7 @@
        </Traces>
       </Graph>
       <Graph Name="Group 2" ScaleMode="1" ScaleMin="0" ScaleMax="100">
-       <Edges Mode="0" TopEdge="423" BottomEdge="513"/>
+       <Edges Mode="0" TopEdge="354" BottomEdge="429"/>
        <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
        <Lines>
         <Line Index="0" Enabled="1" Value="0" Color="210,210,210"/>
@@ -365,8 +365,21 @@
         <Trace Id="Throttle" DisplayUnit="%" DisplayDPS="2" Visible="1"/>
        </Traces>
       </Graph>
+      <Graph Name="Group 3" ScaleMode="2" ScaleMin="0" ScaleMax="1">
+       <Edges Mode="0" TopEdge="429" BottomEdge="493"/>
+       <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
+       <Lines>
+        <Line Index="0" Enabled="1" Value="0" Color="210,210,210"/>
+        <Line Index="1" Enabled="0" Value="0" Color="0,0,248"/>
+        <Line Index="2" Enabled="0" Value="0" Color="248,0,0"/>
+       </Lines>
+       <Traces ActiveTrace="ABS">
+        <Trace Id="TC" DisplayUnit="" DisplayDPS="2" Visible="1"/>
+        <Trace Id="ABS" DisplayUnit="" DisplayDPS="2" Visible="1"/>
+       </Traces>
+      </Graph>
       <Graph Name="Group 1" ScaleMode="1" ScaleMin="-50" ScaleMax="50">
-       <Edges Mode="0" TopEdge="513" BottomEdge="767"/>
+       <Edges Mode="0" TopEdge="493" BottomEdge="745"/>
        <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
        <Lines>
         <Line Index="0" Enabled="1" Value="0" Color="210,210,210"/>
@@ -381,7 +394,7 @@
        </Traces>
       </Graph>
       <Graph Name="Group 9" ScaleMode="1" ScaleMin="-20" ScaleMax="20">
-       <Edges Mode="0" TopEdge="767" BottomEdge="1000"/>
+       <Edges Mode="0" TopEdge="745" BottomEdge="1000"/>
        <Edges Mode="1" TopEdge="0" BottomEdge="1000"/>
        <Lines>
         <Line Index="0" Enabled="1" Value="0" Color="210,210,210"/>
