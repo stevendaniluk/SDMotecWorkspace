@@ -1,8 +1,10 @@
 <?xml version="1.0"?>
 <Maths Locale="English_United States.1252" DefaultLocale="C" Id="Wheel Slip">
  <MathItems>
+  <MathExpression Id="Slip Long F" DisplayUnit="%" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" EnumerationName="" Script="('Slip Long FL' [%] + 'Slip Long FR' [%]) / 2" SampleRate="0" Unit="%"/>
   <MathExpression Id="Slip Long FL" DisplayUnit="%" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="choose('Speed' [m/s] &gt; 5, 'Wheel Speed FL' [m/s] / 'Speed' [m/s] - 1, 0)" SampleRate="0" Unit="ratio"/>
   <MathExpression Id="Slip Long FR" DisplayUnit="%" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="choose('Speed' [m/s] &gt; 5, 'Wheel Speed FR' [m/s] / 'Speed' [m/s] - 1, 0)" SampleRate="0" Unit="ratio"/>
+  <MathExpression Id="Slip Long R" DisplayUnit="%" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" EnumerationName="" Script="('Slip Long RL' [%] + 'Slip Long RR' [%]) / 2" SampleRate="0" Unit="%"/>
   <MathExpression Id="Slip Long RL" DisplayUnit="%" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="choose('Speed' [m/s] &gt; 5, 'Wheel Speed RL' [m/s] / 'Speed' [m/s] - 1, 0)" SampleRate="0" Unit="ratio"/>
   <MathExpression Id="Slip Long RR" DisplayUnit="%" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="choose('Speed' [m/s] &gt; 5, 'Wheel Speed RR' [m/s] / 'Speed' [m/s] - 1, 0)" SampleRate="0" Unit="ratio"/>
   <MathExpression Id="Slip Long Braking FL" DisplayUnit="%" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="choose('Slip Long FL' [%] &lt; 0, -'Slip Long FL' [%], 0)" SampleRate="0" Unit="%"/>
