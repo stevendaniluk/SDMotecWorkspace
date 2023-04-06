@@ -771,10 +771,10 @@
         <Line Index="2" Enabled="0" Value="0" Color="248,0,0"/>
        </Lines>
        <Traces ActiveTrace="Rel Wheel Speed RR">
-        <Trace Id="Rel Wheel Speed FL" DisplayUnit="m/s" DisplayDPS="2" Visible="1"/>
-        <Trace Id="Rel Wheel Speed FR" DisplayUnit="m/s" DisplayDPS="2" Visible="1"/>
-        <Trace Id="Rel Wheel Speed RL" DisplayUnit="m/s" DisplayDPS="2" Visible="1"/>
-        <Trace Id="Rel Wheel Speed RR" DisplayUnit="m/s" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Rel Wheel Speed FL" DisplayUnit="km/h" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Rel Wheel Speed FR" DisplayUnit="km/h" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Rel Wheel Speed RL" DisplayUnit="km/h" DisplayDPS="2" Visible="1"/>
+        <Trace Id="Rel Wheel Speed RR" DisplayUnit="km/h" DisplayDPS="2" Visible="1"/>
        </Traces>
       </Graph>
      </Graphs>
