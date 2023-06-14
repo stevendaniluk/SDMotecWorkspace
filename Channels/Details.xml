@@ -2,5 +2,8 @@
 <Details Locale="English_United States.1252" DefaultLocale="C">
  <Group Name="Custom" Editor="CustomDetailEditor">
   <Detail Id="Traffic Level" Type="1"/>
+  <Detail Id="Air Density" Type="3" Qty="kg/m3"/>
+  <Detail Id="Fuel Initial" Type="3" Qty="m3"/>
+  <Detail Id="Fuel Final" Type="3" Qty="m3"/>
  </Group>
 </Details>
