@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Workbook Locale="English_United States.1252" DefaultLocale="C" Version="200" Name="Notes" Profile="Circuit" Active="Worksheets">
- <Worksheets Version="100" Name="Worksheets" PosPC="0,0,1000,1000" Active="Getting Started">
+ <Worksheets Version="100" Name="Worksheets" PosPC="0,0,1000,1000" Active="Colour Legend">
   <Worksheet Version="200" Name="Getting Started" LinkTo="Laps" LockByGPSTime="0">
    <Controls Active="Notes">
     <MoTeC.Note Version="100" Name="Notes" PosPC="0,0,1000,1000" ShowCaption="1" AutoCaption="0" ContentEncoding="z.base64" ShowEditTools="1">
@@ -11,7 +11,7 @@
   <Worksheet Version="200" Name="Colour Legend" LinkTo="Laps" LockByGPSTime="0">
    <Controls Active="Notes">
     <MoTeC.Note Version="100" Name="Notes" PosPC="0,0,1000,1000" ShowCaption="1" AutoCaption="0" ContentEncoding="z.base64" ShowEditTools="1">
-<![CDATA[eJyVVV1PwkAQ3GcT/0N/ANEY3oghEYhCUgNBNOGxtOUjnpZcT43/3tm5a6VqFWOg27vZndm5PTyVE7mUgUxlJEvpIx7LBZ5DKcTg8yJWIokllw0+z5IBcR4wp8ydIboC1gCXylYSoJ6BNVJiZY/8HJHmOrzv8IwQbRHp/hs4rDzKCs8Czwj5Dn+5PCHXEVvge009quiNGOUqUKtkHVfXTxu693U1S96StRxVuhDlqKDYJ0SqXRVuWClhzgrrEfeUy8g7u8gC4w7Kdogz6QQ+y9UUCgzffMZ3ZyyjhGjP6DvNqCdHhu4U1FCAxXddgkP3PG/KFa/mnL1bMtg6x3cYySu+t8wwiM6wMiC/99OfhdY3wc8qv+mgol54mhlq6CTM6jkYSxfxBKg9MA6oXpiVbo25xyRVcQxsXxZQZcGlHKqsR2UGFVT1IXIAXIIJ8Zg5NTQRQ+Y5eq2YJTusejxE3rEj7cl7r+gbuq6nqqo9TqNDzb6XUesJrXkCKSe+Q0dTvhlyJTXe7+bUeoxLMbM2yHboMKPqBFXb3YrJ5lnNl/6ayAei/MxW2EPn/nLjoTFZUWMKS2RU83ncPFxzGvRmtfc25220RMx40/eBu1kpJiIG/wYKXWu9a1T8zaF5qPTTzM1D7n8cW4T5Oc6RSfjVsK0abulwVt+ftj6mvB1VpcqLn9Rq9Pk/4QP4pfcr]]>
+<![CDATA[eJyVVV1Lw0AQ3GfB/5BHBbGIbyIFa6kKFUv9wPqWJukHnk25XBX/vbNzl7TBplZKm83dzO7s3CY9lAO5lI48SFdG0kZ8K2e4XksuBt+VWImkL5lM8V1ICkQrYA7JHSC6AtYAl8hMYqAWwBopsLIEP0OkXIf7Oa4Rohki3f9CDSvvMsY1xzUC3+GTyQe4jtgcvxPqUUVfxGitHLkK5nFV/qSme1lls6xbMJejSheiDBkU+4FItavCKTPF5IyxHnFPaxn5ZhdpqDiHsjniVE5CPcvVBAoM7zzjtzOWUUy0r+g7TaknA0N3cmrIUcV3XaCG7vm6CVe8mhZ7t6xgK47vMJJP/M7IMIhOsdJhfe+nPwvNb4KfJb/uoKJWPM0UOXQSBtUc3Mo54juglsA4oC7CrJxXmGdMUhn3gW3LE1RZ1NIaquyCygwyqOpNZAe4GBPiMUNqqCOuyXP0WjEjdlj2uIl8ZEfak/de0Td0XU9VVXucRpuafS/dxhOa8AQSTvwJHU14Z1grrvB+N6PWfVx6BfqInajaOXgrzskCOY0c73BtFJhxOMM1ft1vnfEGvJ+XcpLXnE1H/3LppTZxUW06CzDKud1vTnqcEn3imnsd8im1RAz4BliG2vVMfSL6qD+FQteYr4eMu5wahkzbZnEYuP9x7CnM1X6O3IW3iW3UcE+H0+q5aurjgU9Nman0Yptajdb/FT/Enfnp]]>
     </MoTeC.Note>
    </Controls>
   </Worksheet>
