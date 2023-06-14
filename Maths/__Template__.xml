@@ -62,6 +62,10 @@
   <MathExpression Id="Fuel Level" DisplayUnit="l" DisplayDPS="2" DisplayColorIndex="6" Interpolate="1" Script="0" SampleRate="0" Unit="l"/>
   <MathExpression Id="Fuel Pressure" DisplayUnit="psi" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="0" SampleRate="0" Unit="psi"/>
   <MathExpression Id="Gear" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
+  <MathExpression Id="GNSS Altitude" DisplayUnit="m" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="0" SampleRate="0" Unit="m"/>
+  <MathExpression Id="GNSS Latitude" DisplayUnit="deg" DisplayDPS="7" DisplayColorIndex="2" Interpolate="1" Script="0" SampleRate="0" Unit="deg"/>
+  <MathExpression Id="GNSS Longitude" DisplayUnit="deg" DisplayDPS="7" DisplayColorIndex="4" Interpolate="1" Script="0" SampleRate="0" Unit="deg"/>
+  <MathExpression Id="GNSS Speed" DisplayUnit="km/h" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="0" SampleRate="0" Unit="km/h"/>
   <MathExpression Id="Gyro Pitch Rate" DisplayUnit="deg/s" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="0" SampleRate="0" Unit="deg/s"/>
   <MathExpression Id="Gyro Roll Rate" DisplayUnit="deg/s" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="0" SampleRate="0" Unit="deg/s"/>
   <MathExpression Comment="+ve turns right" Id="Gyro Yaw Rate" DisplayUnit="deg/s" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="0" SampleRate="0" Unit="deg/s"/>
