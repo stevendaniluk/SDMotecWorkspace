@@ -1,8 +1,13 @@
 <?xml version="1.0"?>
-<Maths Locale="English_United States.1252" DefaultLocale="C" Id="Car - Exige" Flags="703">
+<Maths Locale="English_United States.1252" DefaultLocale="C" Id="Car - Exige">
  <MathConstants>
+  <MathConstant Name="Bumpstop Thickness Front" Value="5.0" Unit="mm"/>
+  <MathConstant Name="Bumpstop Thickness Rear" Value="5.0" Unit="mm"/>
   <MathConstant Name="CdA" Value="0" Unit="" Comment="Drag coefficient per frontal area"/>
-  <MathConstant Name="Steer Ratio" Value="16" Unit="ratio"/>
+  <MathConstant Name="Front Tire Radius" Value="317" Unit="mm"/>
+  <MathConstant Name="Initial Fuel Level" Value="24.3" Unit="l" Value.Min="0" Value.Max="43.5" QuickEdit="1"/>
+  <MathConstant Name="Rear Tire Radius" Value="332" Unit="mm"/>
+  <MathConstant Name="Steer Ratio" Value="15.8" Unit="ratio"/>
  </MathConstants>
  <MathItems>
   <MathExpression Id="ABS" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
@@ -11,55 +16,56 @@
   <MathExpression Comment="+ve downwards (SAE convention)" Id="Accel Vert" DisplayUnit="m/s/s" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="smooth('Acceleration Z' [m/s/s], 5) + 9.80625" SampleRate="0" Unit="m/s/s"/>
   <MathExpression Id="Battery Voltage" DisplayUnit="V" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'Bat Volts Dash' [V]" SampleRate="0" Unit="V"/>
   <MathExpression Id="Brake" DisplayUnit="%" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'Brake Pedal' [%]" SampleRate="0" Unit="%"/>
-  <MathExpression Id="Brake Bias" DisplayUnit="%" DisplayDPS="2" DisplayColorIndex="1" Interpolate="1" Script="0" SampleRate="0" Unit="%"/>
-  <MathExpression Id="Brake Temp FL" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="0" SampleRate="0" Unit="C"/>
-  <MathExpression Id="Brake Temp FR" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="0" SampleRate="0" Unit="C"/>
-  <MathExpression Id="Brake Temp RL" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="0" SampleRate="0" Unit="C"/>
-  <MathExpression Id="Brake Temp RR" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="0" SampleRate="0" Unit="C"/>
-  <MathExpression Id="Bumpstop FL" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
-  <MathExpression Id="Bumpstop FR" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
-  <MathExpression Id="Bumpstop RL" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
-  <MathExpression Id="Bumpstop RR" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
+  <MathExpression Id="Bumpstop FL" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="choose('Damper Pos Front Max' [mm] - 'Damper Pos FL' [mm] &lt;= 'Bumpstop Thickness Front' [mm], 1, 0)" SampleRate="0" Unit=""/>
+  <MathExpression Id="Bumpstop FR" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="choose('Damper Pos Front Max' [mm] - 'Damper Pos FR' [mm] &lt;= 'Bumpstop Thickness Front' [mm], 1, 0)" SampleRate="0" Unit=""/>
+  <MathExpression Id="Bumpstop RL" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="choose('Damper Pos Rear Max' [mm] - 'Damper Pos RL' [mm] &lt;= 'Bumpstop Thickness Rear' [mm], 1, 0)" SampleRate="0" Unit=""/>
+  <MathExpression Id="Bumpstop RR" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="choose('Damper Pos Rear Max' [mm] - 'Damper Pos RR' [mm] &lt;= 'Bumpstop Thickness Rear' [mm], 1, 0)" SampleRate="0" Unit=""/>
   <MathExpression Id="Clutch" DisplayUnit="%" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'Clutch Pedal' [%]" SampleRate="0" Unit="%"/>
   <MathExpression Id="Damper Pos FL" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'Damper Pos FL' [mm]" SampleRate="0" Unit="mm"/>
   <MathExpression Id="Damper Pos FR" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'Damper Pos FR' [mm]" SampleRate="0" Unit="mm"/>
   <MathExpression Id="Damper Pos RL" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'Damper Pos RL' [mm]" SampleRate="0" Unit="mm"/>
   <MathExpression Id="Damper Pos RR" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'Damper Pos RR' [mm]" SampleRate="0" Unit="mm"/>
+  <MathExpression Id="Damper Pos Front Min" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="6" Interpolate="1" Script="0" SampleRate="0" Unit="mm"/>
+  <MathExpression Id="Damper Pos Front Max" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="6" Interpolate="1" Script="63.5" SampleRate="0" Unit="mm"/>
+  <MathExpression Id="Damper Pos Rear Min" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="6" Interpolate="1" Script="0" SampleRate="0" Unit="mm"/>
+  <MathExpression Id="Damper Pos Rear Max" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="6" Interpolate="1" Script="95.0" SampleRate="0" Unit="mm"/>
   <MathExpression Id="Damper Rate FL" DisplayUnit="mm/s" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="derivative('Damper Pos FL' [mm], 10)" SampleRate="0" Unit="mm/s"/>
   <MathExpression Id="Damper Rate FR" DisplayUnit="mm/s" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="derivative('Damper Pos FR' [mm], 10)" SampleRate="0" Unit="mm/s"/>
   <MathExpression Id="Damper Rate RL" DisplayUnit="mm/s" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="derivative('Damper Pos RL' [mm], 10)" SampleRate="0" Unit="mm/s"/>
   <MathExpression Id="Damper Rate RR" DisplayUnit="mm/s" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="derivative('Damper Pos RR' [mm], 10)" SampleRate="0" Unit="mm/s"/>
-  <MathExpression Id="DRS" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
   <MathExpression Id="Engine Oil Pressure" DisplayUnit="psi" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="'Engine Oil Pressure' [psi]" SampleRate="0" Unit="psi"/>
   <MathExpression Id="Engine Oil Temp" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'Engine Oil Temperature' [C]" SampleRate="0" Unit="C"/>
   <MathExpression Id="Engine Water Temp" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'Coolant Temperature' [C]" SampleRate="0" Unit="C"/>
   <MathExpression Id="Fastest Lap" DisplayUnit="s" DisplayDPS="2" DisplayColorIndex="6" Interpolate="1" Script="'Fastest Lap Time' [s]" SampleRate="0" Unit="s"/>
-  <MathExpression Id="Fuel Level" DisplayUnit="l" DisplayDPS="2" DisplayColorIndex="6" Interpolate="1" Script="'Fuel Level'[l]" SampleRate="0" Unit="l"/>
+  <MathExpression Id="Fuel Level" DisplayUnit="l" DisplayDPS="2" DisplayColorIndex="6" Interpolate="1" Script="'Fuel Level Reading' [l]" SampleRate="0" Unit="l"/>
   <MathExpression Id="Fuel Pressure" DisplayUnit="psi" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="0" SampleRate="0" Unit="psi"/>
   <MathExpression Id="Gear" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'Gear'" SampleRate="0" Unit=""/>
+  <MathExpression Id="GNSS Altitude" DisplayUnit="m" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" EnumerationName="" Script="'GPS Altitude' [m]" SampleRate="0" Unit="m"/>
+  <MathExpression Id="GNSS Latitude" DisplayUnit="deg" DisplayDPS="7" DisplayColorIndex="2" Interpolate="1" EnumerationName="" Script="'GPS Latitude' [deg]" SampleRate="0" Unit="deg"/>
+  <MathExpression Id="GNSS Longitude" DisplayUnit="deg" DisplayDPS="7" DisplayColorIndex="4" Interpolate="1" EnumerationName="" Script="'GPS Longitude' [deg]" SampleRate="0" Unit="deg"/>
+  <MathExpression Id="GNSS Speed" DisplayUnit="km/h" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" EnumerationName="" Script="'GPS Speed' [km/h]" SampleRate="0" Unit="km/h"/>
   <MathExpression Id="Gyro Pitch Rate" DisplayUnit="deg/s" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'Gyro Pitch Velocity' [rad/s]" SampleRate="0" Unit="rad/s"/>
   <MathExpression Id="Gyro Roll Rate" DisplayUnit="deg/s" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'Gyro Roll Velocity' [rad/s]" SampleRate="0" Unit="rad/s"/>
   <MathExpression Comment="+ve turns right" Id="Gyro Yaw Rate" DisplayUnit="deg/s" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'Gyro Yaw Velocity' [rad/s]" SampleRate="0" Unit="rad/s"/>
-  <MathExpression Id="Intake Air Temp" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="1" Interpolate="1" Script="0" SampleRate="0" Unit="C"/>
+  <MathExpression Id="Intake Air Temp" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="1" Interpolate="1" Script="'Air Temp Manifold' [C]" SampleRate="0" Unit="C"/>
   <MathExpression Id="Intake Pressure" DisplayUnit="psi" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="0" SampleRate="0" Unit="psi"/>
   <MathExpression Id="Lap Delta" DisplayUnit="s" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'Lap Gain/Loss Running' [s]" SampleRate="0" Unit="s"/>
   <MathExpression Id="Lap Delta Gradient" DisplayUnit="ratio" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="derivative('Lap Delta' [s], 'Running Lap Time' [s], 50)" SampleRate="0" Unit="ratio"/>
   <MathExpression Id="Lap Time Predicted" DisplayUnit="s" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" Script="'Lap Time Predicted' [s]" SampleRate="0" Unit="s"/>
   <MathExpression Id="Log Marker" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'Log Marker'" SampleRate="0" Unit=""/>
+  <MathExpression Id="Mass" DisplayUnit="kg" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" Script="'Mass Dry' [kg] + 0.7429 * 'Fuel Level' [l]" SampleRate="0" Unit="kg"/>
   <MathExpression Id="MIL" DisplayDPS="0" DisplayColorIndex="1" Interpolate="1" Script="'MIL'" SampleRate="0" Unit=""/>
-  <MathExpression Id="Pit Limiter" DisplayDPS="2" DisplayColorIndex="6" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
-  <MathExpression Id="Ride Height FL" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'Ride Height Offset Front' [mm] - 'Damper Pos FL' [mm] * 'Motion Ratio Front' [ratio]" SampleRate="0" Unit="mm"/>
-  <MathExpression Id="Ride Height FR" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'Ride Height Offset Front' [mm] - 'Damper Pos FR' [mm] * 'Motion Ratio Front' [ratio]
-" SampleRate="0" Unit="mm"/>
-  <MathExpression Id="Ride Height RL" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'Ride Height Offset Rear' [mm] - 'Damper Pos RL' [mm] * 'Motion Ratio Rear' [ratio]" SampleRate="0" Unit="mm"/>
-  <MathExpression Id="Ride Height RR" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="1" Interpolate="1" Script="'Ride Height Offset Rear' [mm] - 'Damper Pos RR' [mm] * 'Motion Ratio Rear' [ratio]" SampleRate="0" Unit="mm"/>
+  <MathExpression Id="Ride Height FL" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'Reference Ride Height Front' [mm] - ('Damper Pos FL' [mm] - 'Reference Damper Position FL' [mm]) * 'Motion Ratio Front'" SampleRate="0" Unit="mm"/>
+  <MathExpression Id="Ride Height FR" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'Reference Ride Height Front' [mm] - ('Damper Pos FR' [mm] - 'Reference Damper Position FR' [mm]) * 'Motion Ratio Front'" SampleRate="0" Unit="mm"/>
+  <MathExpression Id="Ride Height RL" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'Reference Ride Height Rear' [mm] - ('Damper Pos RL' [mm] - 'Reference Damper Position RL' [mm]) * 'Motion Ratio Rear'" SampleRate="0" Unit="mm"/>
+  <MathExpression Id="Ride Height RR" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="1" Interpolate="1" Script="'Reference Ride Height Rear' [mm] - ('Damper Pos RR' [mm] - 'Reference Damper Position RR' [mm]) * 'Motion Ratio Rear'" SampleRate="0" Unit="mm"/>
   <MathExpression Id="Ride Height F" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="0.5 * ('Ride Height FL' [mm] + 'Ride Height FR' [mm])" SampleRate="0" Unit="mm"/>
   <MathExpression Id="Ride Height R" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" Script="0.5 * ('Ride Height RL' [mm] + 'Ride Height RR' [mm])
 " SampleRate="0" Unit="mm"/>
   <MathExpression Id="RPM" DisplayUnit="rpm" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" Script="'Engine RPM' [rpm]" SampleRate="0" Unit="rpm"/>
   <MathExpression Id="Speed" DisplayUnit="km/h" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="'Ground Speed' [m/s]" SampleRate="0" Unit="m/s"/>
   <MathExpression Comment="+ve turns right" Id="Steer Angle" DisplayUnit="rad" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'Steering Wheel Angle' [deg]" SampleRate="0" Unit="deg"/>
-  <MathExpression Id="TC" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="0" SampleRate="0" Unit=""/>
+  <MathExpression Id="TC" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="choose('MIL' &gt;= 8, 1, 0)" SampleRate="0" Unit=""/>
   <MathExpression Id="Throttle" DisplayUnit="%" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="'Throttle Pedal' [%]" SampleRate="0" Unit="%"/>
   <MathExpression Id="Tire Pressure FL" DisplayUnit="psi" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'Tire Pressure FL' [psi]" SampleRate="0" Unit="psi"/>
   <MathExpression Id="Tire Pressure FR" DisplayUnit="psi" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'Tire Pressure FR' [psi]" SampleRate="0" Unit="psi"/>
@@ -145,11 +151,9 @@
   <MathExpression Id="Tire Temp RR 14" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'RR TTPMS T14' [C]" SampleRate="0" Unit="C"/>
   <MathExpression Id="Tire Temp RR 15" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'RR TTPMS T15' [C]" SampleRate="0" Unit="C"/>
   <MathExpression Id="Tire Temp RR 16" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'RR TTPMS T16' [C]" SampleRate="0" Unit="C"/>
-  <MathExpression Id="Velocity Long" DisplayUnit="km/h" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="0" SampleRate="0" Unit="m/s"/>
-  <MathExpression Id="Velocity Lat" DisplayUnit="km/h" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="0" SampleRate="0" Unit="m/s"/>
-  <MathExpression Id="Wheel Speed FL" DisplayUnit="km/h" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'Wheel Speed FL' [km/h]" SampleRate="0" Unit="km/h"/>
-  <MathExpression Id="Wheel Speed FR" DisplayUnit="km/h" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'Wheel Speed FR' [km/h]" SampleRate="0" Unit="km/h"/>
-  <MathExpression Id="Wheel Speed RL" DisplayUnit="km/h" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'Wheel Speed RL' [km/h]" SampleRate="0" Unit="km/h"/>
-  <MathExpression Id="Wheel Speed RR" DisplayUnit="km/h" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'Wheel Speed RR' [km/h]" SampleRate="0" Unit="km/h"/>
+  <MathExpression Id="Wheel Speed FL" DisplayUnit="km/h" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="'Wheel Rot Speed FL' [Hz] * 'Front Tire Radius' [mm] * 2 * 'PI' []" SampleRate="0" Unit="mm/s"/>
+  <MathExpression Id="Wheel Speed FR" DisplayUnit="km/h" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="'Wheel Rot Speed FR' [Hz] * 'Front Tire Radius' [mm] * 2 * 'PI' []" SampleRate="0" Unit="mm/s"/>
+  <MathExpression Id="Wheel Speed RL" DisplayUnit="km/h" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="'Wheel Rot Speed RL' [Hz] * 'Rear Tire Radius' [mm] * 2 * 'PI' []" SampleRate="0" Unit="mm/s"/>
+  <MathExpression Id="Wheel Speed RR" DisplayUnit="km/h" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="'Wheel Rot Speed RR' [Hz] * 'Rear Tire Radius' [mm] * 2 * 'PI' []" SampleRate="0" Unit="mm/s"/>
  </MathItems>
 </Maths>
