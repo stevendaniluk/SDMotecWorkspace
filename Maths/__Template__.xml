@@ -88,7 +88,7 @@
   <MathExpression Id="Ride Height FL" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="0" SampleRate="0" Unit="mm"/>
   <MathExpression Id="Ride Height FR" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="0" SampleRate="0" Unit="mm"/>
   <MathExpression Id="Ride Height RL" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="0" SampleRate="0" Unit="mm"/>
-  <MathExpression Id="Ride Height RR" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="1" Interpolate="1" Script="0" SampleRate="0" Unit="mm"/>
+  <MathExpression Id="Ride Height RR" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="7" Interpolate="1" Script="0" SampleRate="0" Unit="mm"/>
   <MathExpression Id="Ride Height F" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="4" Interpolate="1" Script="0" SampleRate="0" Unit="mm"/>
   <MathExpression Id="Ride Height R" DisplayUnit="mm" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" Script="0" SampleRate="0" Unit="mm"/>
   <MathExpression Id="RPM" DisplayUnit="rpm" DisplayDPS="2" DisplayColorIndex="5" Interpolate="1" Script="0" SampleRate="0" Unit="rpm"/>
