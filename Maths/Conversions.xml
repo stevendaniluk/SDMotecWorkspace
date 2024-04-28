@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <Maths Locale="English_United States.1252" DefaultLocale="C" Id="Conversions">
  <MathConstants>
+  <MathConstant Name="Gravity" Value="9.80665" Unit="m/s/s"/>
   <MathConstant Name="PI" Value="3.14159265" Unit=""/>
  </MathConstants>
  <MathItems>
