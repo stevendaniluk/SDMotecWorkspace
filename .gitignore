@@ -2,4 +2,9 @@
 
 # Motec data
 .backup
-Setup Sheets/Cache
+
+# User data
+Setup Sheets/*
+Track Maps/*.mt2
+Maths/Car - *
+!Maths/Car - Sim*
