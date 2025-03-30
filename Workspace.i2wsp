@@ -10,7 +10,7 @@
  </DataSelect>
  <ChannelsWindow/>
  <CAN/>
- <MoTeC.TrackPos Version="100" Name="TrackPosCtrl.inner" PosPC="0,0,214,361" ShowCaption="0" AutoCaption="0" LinkZoom="1" ModeId="" ShowDataLegend="1" TelemetryZoom="0" ShowSectLabels="0" ShowSectMarks="1" LinkCursor="1" UseLocalColors="0">
+ <MoTeC.TrackPos Version="100" Name="TrackPosCtrl.inner" PosPC="0,0,152,306" ShowCaption="0" AutoCaption="0" LinkZoom="1" ModeId="" ShowDataLegend="1" TelemetryZoom="0" ShowSectLabels="0" ShowSectMarks="1" LinkCursor="1" UseLocalColors="0">
   <ComponentColorScheme>
    <Entry Name="CptDataBackground">
     <RenderMode Mode="SCREEN" RGB="0,128,0"/>
@@ -75,12 +75,12 @@
  </Workbooks>
  <DockWindows>
   <DockWindow Id="Alarms" Visible="0" IsDocked="1" IsPinned="1" DockOffset="0.25" DockSide="0" DockIndex="0" Height="160" Width="220"/>
-  <DockWindow Id="Data" Visible="1" IsDocked="1" IsPinned="0" DockOffset="0" DockSide="3" DockIndex="0" Height="914" Width="216"/>
+  <DockWindow Id="Data" Visible="1" IsDocked="1" IsPinned="0" DockOffset="0" DockSide="3" DockIndex="0" Height="626" Width="216"/>
   <DockWindow Id="Channels" Visible="1" IsDocked="1" IsPinned="1" DockOffset="0" DockSide="35" DockIndex="0" Height="110" Width="220"/>
   <DockWindow Id="Reports" Visible="1" IsDocked="1" IsPinned="1" DockOffset="0" DockSide="35" DockIndex="1" Height="110" Width="220"/>
   <DockWindow Id="Layouts" Visible="1" IsDocked="1" IsPinned="1" DockOffset="0" DockSide="35" DockIndex="2" Height="110" Width="220"/>
   <DockWindow Id="Maths" Visible="1" IsDocked="1" IsPinned="1" DockOffset="0" DockSide="35" DockIndex="3" Height="110" Width="220"/>
-  <DockWindow Id="Track" Visible="0" IsDocked="0" Position="1126,378,1680,860"/>
+  <DockWindow Id="Track" Visible="1" IsDocked="1" IsPinned="0" DockOffset="0.689618" DockSide="3" DockIndex="0" Height="279" Width="216"/>
  </DockWindows>
  <TelemetrySettings/>
  <DataExport Path="" File="" Selection="0" Rate="0" Flags="0"/>
