@@ -29,6 +29,9 @@
   <MathExpression Id="Battery Voltage" DisplayUnit="V" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="0" SampleRate="0" Unit="V"/>
   <MathExpression Id="Brake" DisplayUnit="%" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="0" SampleRate="0" Unit="%"/>
   <MathExpression Id="Brake Bias" DisplayUnit="%" DisplayDPS="2" DisplayColorIndex="1" Interpolate="1" Script="0" SampleRate="0" Unit="%"/>
+  <MathExpression Id="Brake Pressure" DisplayUnit="bar" DisplayDPS="3" DisplayColorIndex="0" Interpolate="1" Script="0" SampleRate="0" Unit="bar"/>
+  <MathExpression Id="Brake Pressure Front" DisplayUnit="bar" DisplayDPS="3" DisplayColorIndex="4" Interpolate="1" Script="0" SampleRate="0" Unit="bar"/>
+  <MathExpression Id="Brake Pressure Rear" DisplayUnit="bar" DisplayDPS="3" DisplayColorIndex="5" Interpolate="1" Script="0" SampleRate="0" Unit="bar"/>
   <MathExpression Id="Brake Temp FL" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="3" Interpolate="1" Script="0" SampleRate="0" Unit="C"/>
   <MathExpression Id="Brake Temp FR" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="2" Interpolate="1" Script="0" SampleRate="0" Unit="C"/>
   <MathExpression Id="Brake Temp RL" DisplayUnit="C" DisplayDPS="2" DisplayColorIndex="0" Interpolate="1" Script="0" SampleRate="0" Unit="C"/>
