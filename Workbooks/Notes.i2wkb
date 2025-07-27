@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Workbook Locale="English_United States.1252" DefaultLocale="C" Version="200" Name="Notes" Profile="Circuit" Active="Worksheets">
- <Worksheets Version="100" Name="Worksheets" PosPC="0,0,1000,1000" Active="Getting Started">
+ <Worksheets Version="100" Name="Worksheets" PosPC="0,0,1000,1000" Active="Colour Legend">
   <Worksheet Version="200" Name="Getting Started" LinkTo="Laps" LockByGPSTime="0">
    <Controls Active="Notes">
     <MoTeC.Note Version="100" Name="Notes" PosPC="0,0,1000,1000" ShowCaption="1" AutoCaption="0" ContentEncoding="z.base64" ShowEditTools="1">

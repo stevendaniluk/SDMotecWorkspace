@@ -3,14 +3,20 @@
  <Resources/>
  <LatGTrackGen LateralGChannel="G Lat" InverseLateralG="1"/>
  <DataSelect SelectFastestOnLoad="1" DefaultShowDisabled="0" MainColorSource="0">
-  <Explore HRef="C:\MoTeC\Logged Data"/>
-  <DataSources/>
-  <View Name="Laps" Color="128,240,0" View="Laps"/>
-  <View Name="Outings" Color="240,128,0" View="Outings"/>
+  <Explore HRef="Y:\car_logs\Rush SR\2025_06_20_Sonoma"/>
+  <DataSources>
+   <LoggedDataSource Name="Y:\car_logs\Rush SR\2025_06_20_Sonoma\20250629-1320100.ld"/>
+  </DataSources>
+  <View Name="Laps" Color="128,240,0" View="Laps">
+   <Main Range.Id="Y:\car_logs\Rush SR\2025_06_20_Sonoma\20250629-1320100.ld::::Lap 26"/>
+  </View>
+  <View Name="Outings" Color="240,128,0" View="Outings">
+   <Main Range.Id="Y:\car_logs\Rush SR\2025_06_20_Sonoma\20250629-1320100.ld::::2:37:19 PM,  "/>
+  </View>
  </DataSelect>
  <ChannelsWindow/>
  <CAN/>
- <MoTeC.TrackPos Version="100" Name="TrackPosCtrl.inner" PosPC="0,0,152,306" ShowCaption="0" AutoCaption="0" LinkZoom="1" ModeId="" ShowDataLegend="1" TelemetryZoom="0" ShowSectLabels="0" ShowSectMarks="1" LinkCursor="1" UseLocalColors="0">
+ <MoTeC.TrackPos Version="100" Name="TrackPosCtrl.inner" PosPC="0,0,200,306" ShowCaption="0" AutoCaption="0" LinkZoom="1" ModeId="" ShowDataLegend="1" TelemetryZoom="0" ShowSectLabels="0" ShowSectMarks="1" LinkCursor="1" UseLocalColors="0">
   <ComponentColorScheme>
    <Entry Name="CptDataBackground">
     <RenderMode Mode="SCREEN" RGB="0,128,0"/>
@@ -60,7 +66,7 @@
  </ValuesWindow>
  <QuickSelectKeys>
   <Key Name="F5" Customised="1" Prompted="1"/>
-  <Key Name="F6" Customised="0" Prompted="0"/>
+  <Key Name="F6" Customised="0" Prompted="1"/>
   <Key Name="F7" Customised="0" Prompted="0"/>
   <Key Name="F8" Customised="0" Prompted="0"/>
  </QuickSelectKeys>
